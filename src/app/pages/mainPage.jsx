@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
+import orderBy from 'lodash/orderBy';
 import { fromStorage } from '../utils/fromStorage';
 import { toStorage } from '../utils/toStorage';
-import TeamMateCard from '../components/ui/teamMateCard';
 import { MATES_STORAGE } from '../constants/constants';
 import teamMockData from '../mockData/teamMates.json';
+import TeamMateCard from '../components/ui/teamMateCard';
 
 const Main = () => {
   const [teamMates, setTeamMates] = useState(
@@ -14,7 +15,8 @@ const Main = () => {
       toStorage(MATES_STORAGE, teamMates);
     }
   }, [teamMates]);
-  console.log('teamMates', teamMates);
+  // console.log('Mainpage mates', teamMates);
+  const sortedMates = orderBy(teamMates, ['isFavourite'], ['desc']);
   return (
     <div>
       <h1>О нашей команде</h1>
@@ -33,8 +35,8 @@ const Main = () => {
       </p>
       <h2 className="my-2">Участники</h2>
       <div className="row row-cols-1 row-cols-md-2 g-4 mt-2">
-        {teamMates.map((m) => (
-          <TeamMateCard key={m._id} user={m} setTeamMates={setTeamMates} />
+        {sortedMates.map((m) => (
+          <TeamMateCard key={m._id} mate={m} setTeamMates={setTeamMates} />
         ))}
       </div>
     </div>
