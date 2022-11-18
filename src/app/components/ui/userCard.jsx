@@ -21,7 +21,7 @@ const UserCard = ({ user }) => {
               alt={user.name || ''}
             />
           </Link>
-          <div className="card-body">
+          <div className="card-body pb-0">
             <h5 className="card-title">
               <Link
                 className="text-body text-decoration-none"
@@ -39,11 +39,11 @@ const UserCard = ({ user }) => {
             </p>
           </div>
           <div className="card-footer text-end mb-1 me-2 bg-white border-0 ">
-            <Link className="text-primary me-1" to={`/user/${user._id}`}>
-              <i class="bi bi-box-arrow-up-right"></i>
+            <Link className="text-primary me-4" to={`/user/${user._id}`}>
+              <i class="bi bi-box-arrow-up-right fs-5"></i>
             </Link>
             <a role="button" href="" onClick={(e) => handleFav(e)}>
-              <i class="bi bi-star"></i>
+              <i class="bi bi-star fs-5"></i>
             </a>
           </div>
         </div>
