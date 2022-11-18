@@ -18,7 +18,10 @@
     },
     "plugins": ["react"],
     "rules": {
-        "useTabs": false,
+        "indent": "off",
+        "prettier/prettier": 0,
+        "semi": ["error", "always"],
+        "useTabs": 0,
         "space-before-function-paren": [
             "error",
             {
@@ -26,13 +29,6 @@
                 "named": "never"
             }
         ],
-        "quotes": ["error", "double", { "allowTemplateLiterals": true, "avoidEscape": true }],
-        "prettier/prettier": [
-            "error",
-            {
-                "endOfLine": "auto",
-                "indent": "off"
-            }
-        ]
+        "quotes": ["error", "double", { "allowTemplateLiterals": true, "avoidEscape": true }]
     }
 }

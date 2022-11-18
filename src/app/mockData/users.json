@@ -1,0 +1,38 @@
+[
+  {
+    "_id": 1,
+    "name":"Участник 1",
+    "age": 25,
+    "image": "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=500",
+    "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequatur culpa cum cumque debitis earum eos eum ex exercitationem fugiat, fugit iure magni minima molestiae, neque nobis non praesentium quae quibusdam quod rem sit sunt suscipit temporibus velit veniam, vitae voluptatum. Aliquam at blanditiis debitis deleniti distinctio, ea exercitationem ipsam, iure magni nemo nihil, qui repudiandae similique sint soluta. Adipisci alias animi aspernatur dolor, doloremque ipsum laboriosam maiores optio quibusdam, reiciendis sapiente vero voluptas. Adipisci magni minima repellat reprehenderit vero! Eligendi, modi, nesciunt? A aliquam corporis cum delectus dignissimos, harum inventore labore nesciunt non repellendus sit soluta totam veniam voluptates.",
+    "isFavourite": false,
+    "social": []
+  },
+  {
+    "_id": 2,
+    "name":"Участник 2",
+    "age": 25,
+    "image": "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=500",
+    "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequatur culpa cum cumque debitis earum eos eum ex exercitationem fugiat, fugit iure magni minima molestiae, neque nobis non praesentium quae quibusdam quod rem sit sunt suscipit temporibus velit veniam, vitae voluptatum. Aliquam at blanditiis debitis deleniti distinctio, ea exercitationem ipsam, iure magni nemo nihil, qui repudiandae similique sint soluta. Adipisci alias animi aspernatur dolor, doloremque ipsum laboriosam maiores optio quibusdam, reiciendis sapiente vero voluptas. Adipisci magni minima repellat reprehenderit vero! Eligendi, modi, nesciunt? A aliquam corporis cum delectus dignissimos, harum inventore labore nesciunt non repellendus sit soluta totam veniam voluptates.",
+    "isFavourite": false,
+    "social": []
+  },
+  {
+    "_id": 3,
+    "name":"Участник 3",
+    "age": 25,
+    "image": "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=500",
+    "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequatur culpa cum cumque debitis earum eos eum ex exercitationem fugiat, fugit iure magni minima molestiae, neque nobis non praesentium quae quibusdam quod rem sit sunt suscipit temporibus velit veniam, vitae voluptatum. Aliquam at blanditiis debitis deleniti distinctio, ea exercitationem ipsam, iure magni nemo nihil, qui repudiandae similique sint soluta. Adipisci alias animi aspernatur dolor, doloremque ipsum laboriosam maiores optio quibusdam, reiciendis sapiente vero voluptas. Adipisci magni minima repellat reprehenderit vero! Eligendi, modi, nesciunt? A aliquam corporis cum delectus dignissimos, harum inventore labore nesciunt non repellendus sit soluta totam veniam voluptates.",
+    "isFavourite": false,
+    "social": []
+  },
+  {
+    "_id": 4,
+    "name":"Участник 4",
+    "age": 25,
+    "image": "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=500",
+    "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequatur culpa cum cumque debitis earum eos eum ex exercitationem fugiat, fugit iure magni minima molestiae, neque nobis non praesentium quae quibusdam quod rem sit sunt suscipit temporibus velit veniam, vitae voluptatum. Aliquam at blanditiis debitis deleniti distinctio, ea exercitationem ipsam, iure magni nemo nihil, qui repudiandae similique sint soluta. Adipisci alias animi aspernatur dolor, doloremque ipsum laboriosam maiores optio quibusdam, reiciendis sapiente vero voluptas. Adipisci magni minima repellat reprehenderit vero! Eligendi, modi, nesciunt? A aliquam corporis cum delectus dignissimos, harum inventore labore nesciunt non repellendus sit soluta totam veniam voluptates.",
+    "isFavourite": false,
+    "social": []
+  }
+]
