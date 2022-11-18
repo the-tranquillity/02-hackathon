@@ -13,7 +13,7 @@ const Main = () => {
     if (!fromStorage(MATES_STORAGE)) {
       toStorage(MATES_STORAGE, teamMates);
     }
-  }, []);
+  }, [teamMates]);
   console.log('teamMates', teamMates);
   return (
     <div>
