@@ -1,7 +1,20 @@
-import UserCard from '../components/ui/userCard';
-import members from '../mockData/users.json';
+import { useEffect, useState } from 'react';
+import { fromStorage } from '../utils/fromStorage';
+import { toStorage } from '../utils/toStorage';
+import TeamMateCard from '../components/ui/teamMateCard';
+import { MATES_STORAGE } from '../constants';
+import teamMockData from '../mockData/teamMates.json';
 
 const Main = () => {
+  const [teamMates, setTeamMates] = useState(
+    fromStorage(MATES_STORAGE) || teamMockData
+  );
+  useEffect(() => {
+    if (!fromStorage(MATES_STORAGE)) {
+      toStorage(MATES_STORAGE, teamMates);
+    }
+  }, [teamMates]);
+  console.log('teamMates', teamMates);
   return (
     <div>
       <h1>О нашей команде</h1>
@@ -18,10 +31,10 @@ const Main = () => {
         nesciunt? A aliquam corporis cum delectus dignissimos, harum inventore
         labore nesciunt non repellendus sit soluta totam veniam voluptates.
       </p>
-      <h2>Участники</h2>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        {members.map((m) => (
-          <UserCard key={m._id} user={m} />
+      <h2 className="my-2">Участники</h2>
+      <div className="row row-cols-1 row-cols-md-2 g-4 mt-2">
+        {teamMates.map((m) => (
+          <TeamMateCard key={m._id} user={m} setTeamMates={setTeamMates} />
         ))}
       </div>
     </div>
