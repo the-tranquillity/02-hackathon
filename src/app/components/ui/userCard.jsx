@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 const UserCard = ({ user }) => {
   console.log(user);
   const imgFallback = 'https://via.placeholder.com/150';
+  const handleFav = (e) => {
+    e.preventDefault();
+    console.log('handleFav click');
+  };
   return (
     user && (
       <div className="col">
@@ -35,7 +39,12 @@ const UserCard = ({ user }) => {
             </p>
           </div>
           <div className="card-footer text-end mb-1 me-2 bg-white border-0 ">
-            links
+            <Link className="text-primary me-1" to={`/user/${user._id}`}>
+              <i class="bi bi-box-arrow-up-right"></i>
+            </Link>
+            <a role="button" href="" onClick={(e) => handleFav(e)}>
+              <i class="bi bi-star"></i>
+            </a>
           </div>
         </div>
       </div>
