@@ -1,0 +1,27 @@
+[
+  {
+    "_id": "1",
+    "name": "Team Lead",
+    "color": "success"
+  },
+  {
+    "_id": "2",
+    "name": "Frontend",
+    "color": "primary"
+  },
+  {
+    "_id": "3",
+    "name": "Backend",
+    "color": "dark"
+  },
+  {
+    "_id": "4",
+    "name": "Creativity",
+    "color": "warning"
+  },
+  {
+    "_id": "5",
+    "name": "Content",
+    "color": "info"
+  }
+]
