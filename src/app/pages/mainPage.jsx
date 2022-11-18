@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { fromStorage } from '../utils/fromStorage';
 import { toStorage } from '../utils/toStorage';
-import UserCard from '../components/ui/userCard';
+import TeamMateCard from '../components/ui/teamMateCard';
 import { MATES_STORAGE } from '../constants';
 import teamMockData from '../mockData/teamMates.json';
 
@@ -34,7 +34,7 @@ const Main = () => {
       <h2 className="my-2">Участники</h2>
       <div className="row row-cols-1 row-cols-md-2 g-4 mt-2">
         {teamMates.map((m) => (
-          <UserCard key={m._id} user={m} setTeamMates={setTeamMates} />
+          <TeamMateCard key={m._id} user={m} setTeamMates={setTeamMates} />
         ))}
       </div>
     </div>

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const UserCard = ({ user }) => {
+const TeamMateCard = ({ user }) => {
   console.log(user);
   const imgFallback = 'https://via.placeholder.com/150';
   const handleFav = (e) => {
@@ -52,4 +52,4 @@ const UserCard = ({ user }) => {
   );
 };
 
-export default UserCard;
+export default TeamMateCard;
