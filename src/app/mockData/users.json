@@ -4,7 +4,8 @@
     "name": "Юрий Стахнев",
     "age": 25,
     "image": "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=500",
-    "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequatur culpa cum cumque debitis earum eos eum ex exercitationem fugiat, fugit iure magni minima molestiae, neque nobis non praesentium quae quibusdam quod rem sit sunt suscipit temporibus velit veniam, vitae voluptatum. Aliquam at blanditiis debitis deleniti distinctio, ea exercitationem ipsam, iure magni nemo nihil, qui repudiandae similique sint soluta. Adipisci alias animi aspernatur dolor, doloremque ipsum laboriosam maiores optio quibusdam, reiciendis sapiente vero voluptas. Adipisci magni minima repellat reprehenderit vero! Eligendi, modi, nesciunt? A aliquam corporis cum delectus dignissimos, harum inventore labore nesciunt non repellendus sit soluta totam veniam voluptates.",
+    "teaser": "fugit iure magni minima molestiae, neque nobis non praesentium",
+    "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequatur culpa cum cumque debitis earum eos eum ex exercitationem fugiat, quae quibusdam quod rem sit sunt suscipit temporibus velit veniam, vitae voluptatum. Aliquam at blanditiis debitis deleniti distinctio, ea exercitationem ipsam, iure magni nemo nihil, qui repudiandae similique sint soluta. Adipisci alias animi aspernatur dolor, doloremque ipsum laboriosam maiores optio quibusdam, reiciendis sapiente vero voluptas. Adipisci magni minima repellat reprehenderit vero! Eligendi, modi, nesciunt? A aliquam corporis cum delectus dignissimos, harum inventore labore nesciunt non repellendus sit soluta totam veniam voluptates.",
     "isFavourite": false,
     "social": [],
     "badges": ["2", "3"]
@@ -14,7 +15,8 @@
     "name": "Алексей Чернов",
     "age": 25,
     "image": "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=500",
-    "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequatur culpa cum cumque debitis earum eos eum ex exercitationem fugiat, fugit iure magni minima molestiae, neque nobis non praesentium quae quibusdam quod rem sit sunt suscipit temporibus velit veniam, vitae voluptatum. Aliquam at blanditiis debitis deleniti distinctio, ea exercitationem ipsam, iure magni nemo nihil, qui repudiandae similique sint soluta. Adipisci alias animi aspernatur dolor, doloremque ipsum laboriosam maiores optio quibusdam, reiciendis sapiente vero voluptas. Adipisci magni minima repellat reprehenderit vero! Eligendi, modi, nesciunt? A aliquam corporis cum delectus dignissimos, harum inventore labore nesciunt non repellendus sit soluta totam veniam voluptates.",
+    "teaser": " Adipisci magni minima repellat reprehenderit vero! Eligendi",
+    "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequatur culpa cum cumque debitis earum eos eum ex exercitationem fugiat, fugit iure magni minima molestiae, neque nobis non praesentium quae quibusdam quod rem sit sunt suscipit temporibus velit veniam, vitae voluptatum. Aliquam at blanditiis debitis deleniti distinctio, ea exercitationem ipsam, iure magni nemo nihil, qui repudiandae similique sint soluta. Adipisci alias animi aspernatur dolor, doloremque ipsum laboriosam maiores optio quibusdam, reiciendis sapiente vero voluptas. Modi, nesciunt? A aliquam corporis cum delectus dignissimos, harum inventore labore nesciunt non repellendus sit soluta totam veniam voluptates.",
     "isFavourite": false,
     "social": [],
     "badges": ["2", "5"]
@@ -22,9 +24,10 @@
   {
     "_id": 3,
     "name": "Михаил Катьянов",
-    "age": 36,
+    "age": 25,
     "image": "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=500",
-    "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequatur culpa cum cumque debitis earum eos eum ex exercitationem fugiat, fugit iure magni minima molestiae, neque nobis non praesentium quae quibusdam quod rem sit sunt suscipit temporibus velit veniam, vitae voluptatum. Aliquam at blanditiis debitis deleniti distinctio, ea exercitationem ipsam, iure magni nemo nihil, qui repudiandae similique sint soluta. Adipisci alias animi aspernatur dolor, doloremque ipsum laboriosam maiores optio quibusdam, reiciendis sapiente vero voluptas. Adipisci magni minima repellat reprehenderit vero! Eligendi, modi, nesciunt? A aliquam corporis cum delectus dignissimos, harum inventore labore nesciunt non repellendus sit soluta totam veniam voluptates.",
+    "teaser": "Accusamus consequatur culpa cum cumque debitis earum",
+    "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos eum ex exercitationem fugiat, fugit iure magni minima molestiae, neque nobis non praesentium quae quibusdam quod rem sit sunt suscipit temporibus velit veniam, vitae voluptatum. Aliquam at blanditiis debitis deleniti distinctio, ea exercitationem ipsam, iure magni nemo nihil, qui repudiandae similique sint soluta. Adipisci alias animi aspernatur dolor, doloremque ipsum laboriosam maiores optio quibusdam, reiciendis sapiente vero voluptas. Adipisci magni minima repellat reprehenderit vero! Eligendi, modi, nesciunt? A aliquam corporis cum delectus dignissimos, harum inventore labore nesciunt non repellendus sit soluta totam veniam voluptates.",
     "isFavourite": false,
     "social": [],
     "badges": ["1", "2"]
@@ -34,7 +37,8 @@
     "name": "Али-Хан Байбутов",
     "age": 25,
     "image": "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=500",
-    "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequatur culpa cum cumque debitis earum eos eum ex exercitationem fugiat, fugit iure magni minima molestiae, neque nobis non praesentium quae quibusdam quod rem sit sunt suscipit temporibus velit veniam, vitae voluptatum. Aliquam at blanditiis debitis deleniti distinctio, ea exercitationem ipsam, iure magni nemo nihil, qui repudiandae similique sint soluta. Adipisci alias animi aspernatur dolor, doloremque ipsum laboriosam maiores optio quibusdam, reiciendis sapiente vero voluptas. Adipisci magni minima repellat reprehenderit vero! Eligendi, modi, nesciunt? A aliquam corporis cum delectus dignissimos, harum inventore labore nesciunt non repellendus sit soluta totam veniam voluptates.",
+    "teaser": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    "about": "Accusamus consequatur culpa cum cumque debitis earum eos eum ex exercitationem fugiat, fugit iure magni minima molestiae, neque nobis non praesentium quae quibusdam quod rem sit sunt suscipit temporibus velit veniam, vitae voluptatum. Aliquam at blanditiis debitis deleniti distinctio, ea exercitationem ipsam, iure magni nemo nihil, qui repudiandae similique sint soluta. Adipisci alias animi aspernatur dolor, doloremque ipsum laboriosam maiores optio quibusdam, reiciendis sapiente vero voluptas. Adipisci magni minima repellat reprehenderit vero! Eligendi, modi, nesciunt? A aliquam corporis cum delectus dignissimos, harum inventore labore nesciunt non repellendus sit soluta totam veniam voluptates.",
     "isFavourite": false,
     "social": [],
     "badges": ["2", "4"]
