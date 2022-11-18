@@ -3,44 +3,62 @@
     "_id": 1,
     "name": "Юрий Стахнев",
     "age": 25,
-    "image": "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=500",
-    "teaser": "fugit iure magni minima molestiae, neque nobis non praesentium",
-    "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequatur culpa cum cumque debitis earum eos eum ex exercitationem fugiat, quae quibusdam quod rem sit sunt suscipit temporibus velit veniam, vitae voluptatum. Aliquam at blanditiis debitis deleniti distinctio, ea exercitationem ipsam, iure magni nemo nihil, qui repudiandae similique sint soluta. Adipisci alias animi aspernatur dolor, doloremque ipsum laboriosam maiores optio quibusdam, reiciendis sapiente vero voluptas. Adipisci magni minima repellat reprehenderit vero! Eligendi, modi, nesciunt? A aliquam corporis cum delectus dignissimos, harum inventore labore nesciunt non repellendus sit soluta totam veniam voluptates.",
+    "image": null,
+    "teaser": "Sed iaculis in sem sit amet consectetur. Suspendisse aliquet neque vel elit suscipit iaculis.",
+    "about": "В проекте Hackathon #2 реализовал Router, компоненты Progress и Badge",
     "isFavourite": false,
-    "social": [],
+    "social": [
+      {
+        "gh": "https://github.com/staelgit"
+      }
+    ],
     "badges": ["2", "3"]
   },
   {
     "_id": 2,
     "name": "Алексей Чернов",
-    "age": 25,
-    "image": "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=500",
-    "teaser": " Adipisci magni minima repellat reprehenderit vero! Eligendi",
-    "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequatur culpa cum cumque debitis earum eos eum ex exercitationem fugiat, fugit iure magni minima molestiae, neque nobis non praesentium quae quibusdam quod rem sit sunt suscipit temporibus velit veniam, vitae voluptatum. Aliquam at blanditiis debitis deleniti distinctio, ea exercitationem ipsam, iure magni nemo nihil, qui repudiandae similique sint soluta. Adipisci alias animi aspernatur dolor, doloremque ipsum laboriosam maiores optio quibusdam, reiciendis sapiente vero voluptas. Modi, nesciunt? A aliquam corporis cum delectus dignissimos, harum inventore labore nesciunt non repellendus sit soluta totam veniam voluptates.",
+    "age": 34,
+    "image": "app/assets/imgs/avatars/aleksej-chernov.jpg",
+    "teaser": "Хочу развития, поэтому решил стать программистом и работать в самой развивающей отрасли",
+    "about": "В проекте Hackathon #2 реализовал компоненты Navbar и Slide",
     "isFavourite": false,
-    "social": [],
+    "social": [
+      {
+        "tg": "https://t.me/alexblackskja",
+        "vk": "https://vk.com/id97804117",
+        "gh": "https://github.com/Al1988-Black"
+      }
+    ],
     "badges": ["2", "5"]
   },
   {
     "_id": 3,
     "name": "Михаил Катьянов",
-    "age": 25,
-    "image": "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=500",
-    "teaser": "Accusamus consequatur culpa cum cumque debitis earum",
-    "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos eum ex exercitationem fugiat, fugit iure magni minima molestiae, neque nobis non praesentium quae quibusdam quod rem sit sunt suscipit temporibus velit veniam, vitae voluptatum. Aliquam at blanditiis debitis deleniti distinctio, ea exercitationem ipsam, iure magni nemo nihil, qui repudiandae similique sint soluta. Adipisci alias animi aspernatur dolor, doloremque ipsum laboriosam maiores optio quibusdam, reiciendis sapiente vero voluptas. Adipisci magni minima repellat reprehenderit vero! Eligendi, modi, nesciunt? A aliquam corporis cum delectus dignissimos, harum inventore labore nesciunt non repellendus sit soluta totam veniam voluptates.",
+    "age": 36,
+    "image": "app/assets/imgs/avatars/mikhail-katyanov.jpg",
+    "teaser": "Предприниматель, веб-мастер, начинающий форонтэндер.",
+    "about": "В проекте Hackathon #2 реализовал UI, сатраницы и компонент «карточка участника команды»",
     "isFavourite": false,
-    "social": [],
+    "social": [
+      {
+        "gh": "https://github.com/the-tranquillity"
+      }
+    ],
     "badges": ["1", "2"]
   },
   {
     "_id": 4,
     "name": "Али-Хан Байбутов",
     "age": 25,
-    "image": "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=500",
+    "image": null,
     "teaser": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    "about": "Accusamus consequatur culpa cum cumque debitis earum eos eum ex exercitationem fugiat, fugit iure magni minima molestiae, neque nobis non praesentium quae quibusdam quod rem sit sunt suscipit temporibus velit veniam, vitae voluptatum. Aliquam at blanditiis debitis deleniti distinctio, ea exercitationem ipsam, iure magni nemo nihil, qui repudiandae similique sint soluta. Adipisci alias animi aspernatur dolor, doloremque ipsum laboriosam maiores optio quibusdam, reiciendis sapiente vero voluptas. Adipisci magni minima repellat reprehenderit vero! Eligendi, modi, nesciunt? A aliquam corporis cum delectus dignissimos, harum inventore labore nesciunt non repellendus sit soluta totam veniam voluptates.",
+    "about": "В проекте Hackathon #2 реализовал компоненты Button и Breadcrumbs",
     "isFavourite": false,
-    "social": [],
+    "social": [
+      {
+        "gh": "https://github.com/AliBaibutov"
+      }
+    ],
     "badges": ["2", "4"]
   }
 ]

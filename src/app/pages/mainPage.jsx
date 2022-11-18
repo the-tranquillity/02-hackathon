@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { fromStorage } from '../utils/fromStorage';
 import { toStorage } from '../utils/toStorage';
-import TeamMateCard from '../components/ui/teamMateCard';
 import { MATES_STORAGE } from '../constants/constants';
 import teamMockData from '../mockData/teamMates.json';
+import TeamMateCard from '../components/ui/teamMateCard';
 
 const Main = () => {
   const [teamMates, setTeamMates] = useState(

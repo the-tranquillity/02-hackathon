@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 
 const TeamMateCard = ({ user }) => {
-  console.log(user);
-  const imgFallback = 'https://via.placeholder.com/150';
+  const imgFallback =
+    'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=500';
   const handleFav = (e) => {
     e.preventDefault();
     console.log('handleFav click');
@@ -16,7 +16,7 @@ const TeamMateCard = ({ user }) => {
             to={`/user/${user._id}`}
           >
             <img
-              src={user.image || imgFallback}
+              src={user.image ? require(`/src/${user.image}`) : imgFallback}
               className="card-img-top"
               alt={user.name || ''}
             />
@@ -42,9 +42,13 @@ const TeamMateCard = ({ user }) => {
             <Link className="text-primary me-4" to={`/user/${user._id}`}>
               <i className="bi bi-box-arrow-up-right fs-5"></i>
             </Link>
-            <a role="button" href="" onClick={(e) => handleFav(e)}>
+            <button
+              className="border-0 bg-transparent text-primary"
+              href=""
+              onClick={(e) => handleFav(e)}
+            >
               <i className="bi bi-star fs-5"></i>
-            </a>
+            </button>
           </div>
         </div>
       </div>
