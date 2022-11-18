@@ -1,4 +1,4 @@
-import Member from '../components/ui/member';
+import UserCard from '../components/ui/userCard';
 import members from '../mockData/users.json';
 
 const Main = () => {
@@ -18,10 +18,10 @@ const Main = () => {
         nesciunt? A aliquam corporis cum delectus dignissimos, harum inventore
         labore nesciunt non repellendus sit soluta totam veniam voluptates.
       </p>
-      <h2>Участники</h2>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
+      <h2 className="mt-2">Участники</h2>
+      <div className="row row-cols-1 row-cols-md-2 g-4 mt-2">
         {members.map((m) => (
-          <Member key={m._id} user={m} />
+          <UserCard key={m._id} user={m} />
         ))}
       </div>
     </div>
