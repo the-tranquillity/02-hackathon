@@ -3,12 +3,14 @@ import NavBar from "./navBar";
 
 const Layout = () => {
     return (
-        <>
-            <NavBar />
+        <div>
+            <div>
+                <NavBar />
+            </div>
             <div className="container mt-5 mb-5">
                 <Outlet />
             </div>
-        </>
+        </div>
     );
 };
 

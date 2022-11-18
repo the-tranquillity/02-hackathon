@@ -1,48 +1,52 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
+import { MATES_STORAGE } from "../../constants/constants";
+import { fromStorage } from "../../utils/fromStorage";
+import { toStorage } from "../../utils/toStorage";
 
-const TeamMateCard = ({ user }) => {
+const TeamMateCard = ({ mate, setTeamMates }) => {
+    const { _id: id, name, age, image, isFavourite, teaser } = mate;
     const imgFallback = "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=500";
-    const handleFav = (e) => {
-        e.preventDefault();
-        console.log("handleFav click");
+
+    const handleFav = () => {
+        const currentMates = fromStorage(MATES_STORAGE);
+        const restMates = currentMates.filter((m) => m._id !== id);
+        const updatedMates = [{ ...mate, isFavourite: !isFavourite }, ...restMates];
+        toStorage(MATES_STORAGE, updatedMates);
+        setTeamMates(updatedMates);
     };
     return (
-        user && (
+        mate && (
             <div className="col">
                 <div className="card">
-                    <Link className="text-body text-decoration-none" to={`/user/${user._id}`}>
+                    <Link className="text-body text-decoration-none" to={`/user/${id}`}>
                         <img
-                            src={user.image ? require(`/src/${user.image}`) : imgFallback}
+                            src={image ? require(`/src/${image}`) : imgFallback}
                             className="card-img-top"
-                            alt={user.name || ""}
+                            alt={name || ""}
                         />
                     </Link>
                     <div className="card-body pb-0">
                         <h5 className="card-title">
-                            <Link
-                                className="text-body text-decoration-none"
-                                to={`/user/${user._id}`}
-                            >
-                                {user.name || ""}{" "}
+                            <Link className="text-body text-decoration-none" to={`/user/${id}`}>
+                                {name || ""}{" "}
                                 <span className="ms-2 badge bg-dark">
-                                    {user.age || ""}
+                                    {age || ""}
                                     <span className="fw-normal fs-6 ms-1">лет</span>
                                 </span>
                             </Link>
                         </h5>
-                        <p className="card-text text-dark text-opacity-50">{user.teaser || ""}</p>
+                        <p className="card-text text-dark text-opacity-50">{teaser || ""}</p>
                     </div>
                     <div className="card-footer text-end mb-1 me-2 bg-white border-0 ">
-                        <Link className="text-primary me-4" to={`/user/${user._id}`}>
+                        <Link className="text-primary me-4" to={`/user/${id}`}>
                             <i className="bi bi-box-arrow-up-right fs-5"></i>
                         </Link>
                         <button
                             className="border-0 bg-transparent text-primary"
-                            href=""
-                            onClick={(e) => handleFav(e)}
+                            onClick={handleFav}
                         >
-                            <i className="bi bi-star fs-5"></i>
+                            <i className={"bi fs-5 bi-star" + (isFavourite ? "-fill" : "")}></i>
                         </button>
                     </div>
                 </div>
