@@ -1,9 +1,14 @@
-import { Navigate } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import Layout from '../components/ui/layout';
 import NotFound from '../components/ui/notFound';
 import Favourites from '../pages/favourites';
 import Main from '../pages/mainPage';
 import User from '../pages/userPage';
+
+const UsersRedirect = () => {
+  const { userId } = useParams();
+  return <Navigate to={`/user/${userId}`} />;
+};
 
 export const routes = [
   {
@@ -30,7 +35,7 @@ export const routes = [
               },
               {
                 path: '*',
-                element: <Navigate to="../../1" />,
+                element: <Navigate to="../" />,
               },
             ],
           },
@@ -38,7 +43,16 @@ export const routes = [
       },
       {
         path: 'users',
-        element: <Navigate to="../user" />,
+        children: [
+          {
+            index: true,
+            element: <Navigate to="../user" />,
+          },
+          {
+            path: ':userId',
+            element: <UsersRedirect />,
+          },
+        ],
       },
       {
         path: 'favourites',
