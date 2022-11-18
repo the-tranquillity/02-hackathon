@@ -28,7 +28,7 @@ const UserCard = ({ user }) => {
                 to={`/user/${user._id}`}
               >
                 {user.name || ''}{' '}
-                <span class="ms-2 badge bg-dark">
+                <span className="ms-2 badge bg-dark">
                   {user.age || ''}
                   <span className="fw-normal fs-6 ms-1">лет</span>
                 </span>
@@ -40,10 +40,10 @@ const UserCard = ({ user }) => {
           </div>
           <div className="card-footer text-end mb-1 me-2 bg-white border-0 ">
             <Link className="text-primary me-4" to={`/user/${user._id}`}>
-              <i class="bi bi-box-arrow-up-right fs-5"></i>
+              <i className="bi bi-box-arrow-up-right fs-5"></i>
             </Link>
             <a role="button" href="" onClick={(e) => handleFav(e)}>
-              <i class="bi bi-star fs-5"></i>
+              <i className="bi bi-star fs-5"></i>
             </a>
           </div>
         </div>
