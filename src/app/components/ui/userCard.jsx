@@ -1,6 +1,6 @@
-const Member = (user) => {
+const UserCard = (user) => {
   console.log(user);
   return <div>Member</div>;
 };
 
-export default Member;
+export default UserCard;
