@@ -23,7 +23,16 @@ export const routes = [
           },
           {
             path: ':userId',
-            element: <User />,
+            children: [
+              {
+                index: true,
+                element: <User />,
+              },
+              {
+                path: '*',
+                element: <Navigate to="../../1" />,
+              },
+            ],
           },
         ],
       },
