@@ -1,53 +1,56 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-/* eslint-disable react/prop-types */
 const Button = ({
     children,
     routerLink,
     rounded,
     bgColor,
-    textColor = "white",
+    textColor,
     label,
     to,
     action,
     noBorder,
     handler
 }) => {
+    const classes =
+        (rounded ? "rounded-pill" : "") +
+        " btn " +
+        (bgColor ? "bg-" + bgColor : "") +
+        " " +
+        (textColor ? "text-" + textColor : "") +
+        " " +
+        (noBorder ? "border-0" : "");
+
     if (routerLink) {
         return (
-            <Link
-                type="button"
-                className={
-                    (rounded ? "rounded-pill" : "") +
-                    " btn " +
-                    (bgColor ? "bg-" + bgColor : "") +
-                    " " +
-                    (textColor ? "text-" + textColor : "") +
-                    " " +
-                    (noBorder ? "border-0" : "")
-                }
-                to={to}
-            >
+            <Link type="button" className={classes} to={to}>
                 {label || children}
             </Link>
         );
     }
     return (
-        <button
-            className={
-                (rounded ? "rounded-pill" : "") +
-                " btn " +
-                (bgColor ? "bg-" + bgColor : "") +
-                " " +
-                (textColor ? "text-" + textColor : "") +
-                " " +
-                (noBorder ? "border-0" : "")
-            }
-            onClick={handler ? action : undefined}
-        >
+        <button className={classes} onClick={handler ? action : undefined}>
             {label || children}
         </button>
     );
+};
+
+Button.defaultProps = {
+    textColor: "white"
+};
+
+Button.propTypes = {
+    children: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]),
+    routerLink: PropTypes.bool,
+    rounded: PropTypes.bool,
+    bgColor: PropTypes.string,
+    textColor: PropTypes.string,
+    label: PropTypes.string,
+    to: PropTypes.string,
+    action: PropTypes.func,
+    noBorder: PropTypes.bool,
+    handler: PropTypes.bool
 };
 
 export default Button;

@@ -1,5 +1,6 @@
-/* eslint-disable react/prop-types */
-const Badge = ({ bgColor, textColor = "white", label }) => {
+import PropTypes from "prop-types";
+
+const Badge = ({ bgColor, textColor, label }) => {
     return (
         <div
             className={
@@ -9,6 +10,16 @@ const Badge = ({ bgColor, textColor = "white", label }) => {
             {label}
         </div>
     );
+};
+
+Badge.defaultProps = {
+    textColor: "white"
+};
+
+Badge.propTypes = {
+    bgColor: PropTypes.string,
+    textColor: PropTypes.string,
+    label: PropTypes.string.isRequired
 };
 
 export default Badge;
