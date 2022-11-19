@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAction, createSlice } from "@reduxjs/toolkit";
 import orderBy from "lodash.orderby";
 import localStorageService from "../services/localStorage.service";
 
@@ -11,6 +11,9 @@ const matesSlice = createSlice({
     },
     reducers: {
         matesRequested: (state) => {
+            state.isLoading = true;
+        },
+        mateUpdateRequested: (state) => {
             state.isLoading = true;
         },
         matesReceived: (state, action) => {
@@ -27,15 +30,18 @@ const matesSlice = createSlice({
                 ...state.entities[elementIndex],
                 ...action.payload
             };
+            state.isLoading = false;
         }
     }
 });
 
 const { reducer: matesReducer, actions } = matesSlice;
+const { matesRequested, matesReceived, matesRequestedFailed, mateUpdateRequested, mateUpdated } =
+    actions;
 
-const { matesRequested, matesReceived, matesRequestedFailed } = actions;
+const mateUpdateFailed = createAction("mates/mateUpdateFailed");
 
-export const loadMates = () => async (dispatch, getState) => {
+export const loadMates = () => async (dispatch) => {
     dispatch(matesRequested);
     try {
         let content = await localStorageService.getMates();
@@ -50,6 +56,20 @@ export const loadMates = () => async (dispatch, getState) => {
     }
 };
 
+export const updateMate = (payload) => async (dispatch) => {
+    try {
+        dispatch(mateUpdateRequested());
+        const content = await localStorageService.updateMate(payload);
+        dispatch(mateUpdated(content));
+    } catch (error) {
+        dispatch(mateUpdateFailed(error.message));
+    }
+};
+
 export const getMates = () => (state) => state.mates.entities;
+
+export const getMateById = (mateId) => (state) => {
+    return state.mates.entities ? state.mates.entities.find((m) => +m._id === +mateId) : null;
+};
 export const getMatesLoadingStatus = () => (state) => state.mates.isLoading;
 export default matesReducer;

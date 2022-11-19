@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Navigate, useParams } from "react-router-dom";
 import Layout from "../components/ui/layout";
-import NotFound from "../components/ui/notFound";
+import NotFound from "../pages/notFound";
 import Favourites from "../pages/favourites";
 import Main from "../pages/mainPage";
 import User from "../pages/userPage";

@@ -18,13 +18,21 @@ const Button = ({
             <Link
                 type="button"
                 className={
-                    (rounded ? "rounded-pill" : "") +
+                    (rounded
+? "rounded-pill"
+: "") +
                     " btn " +
-                    (bgColor ? "bg-" + bgColor : "") +
+                    (bgColor
+? "bg-" + bgColor
+: "") +
                     " " +
-                    (textColor ? "text-" + textColor : "") +
+                    (textColor
+? "text-" + textColor
+: "") +
                     " " +
-                    (noBorder ? "border-0" : "")
+                    (noBorder
+? "border-0"
+: "")
                 }
                 to={to}
             >
@@ -35,15 +43,25 @@ const Button = ({
     return (
         <button
             className={
-                (rounded ? "rounded-pill" : "") +
+                (rounded
+? "rounded-pill"
+: "") +
                 " btn " +
-                (bgColor ? "bg-" + bgColor : "") +
+                (bgColor
+? "bg-" + bgColor
+: "") +
                 " " +
-                (textColor ? "text-" + textColor : "") +
+                (textColor
+? "text-" + textColor
+: "") +
                 " " +
-                (noBorder ? "border-0" : "")
+                (noBorder
+? "border-0"
+: "")
             }
-            onClick={handler ? action : undefined}
+            onClick={handler
+? action
+: undefined}
         >
             {label || children}
         </button>

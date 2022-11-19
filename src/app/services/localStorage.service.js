@@ -19,13 +19,13 @@ const getMateById = (id) =>
             resolve(
                 JSON.parse(localStorage.getItem(MATES_STORAGE)).find((mate) => mate._id === id)
             );
-        }, 1000);
+        }, 550);
     });
 
-const updateMate = (id, data) =>
+const updateMate = (data) =>
     new Promise((resolve) => {
         const mates = JSON.parse(localStorage.getItem(MATES_STORAGE));
-        const mateIndex = mates.findIndex((m) => m._id === id);
+        const mateIndex = mates.findIndex((m) => m._id === data._id);
         mates[mateIndex] = { ...mates[mateIndex], ...data };
         localStorage.setItem(MATES_STORAGE, JSON.stringify(mates));
         resolve(mates[mateIndex]);

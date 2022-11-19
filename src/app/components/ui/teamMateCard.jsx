@@ -1,20 +1,24 @@
 /* eslint-disable react/prop-types */
+import { updateMate } from "app/store/mates";
 import { Link } from "react-router-dom";
-import { MATES_STORAGE } from "../../constants/constants";
-import { fromStorage } from "../../utils/fromStorage";
-import { toStorage } from "../../utils/toStorage";
+/* import { MATES_STORAGE } from "../../constants/constants";
+import { fromStorage } from "../../utils/fromStorage"; */
+// import { toStorage } from "../../utils/toStorage";
+import { useDispatch } from "react-redux";
 import Button from "../common/button";
 
-const TeamMateCard = ({ mate, setTeamMates }) => {
+const TeamMateCard = ({ mate }) => {
+    const dispatch = useDispatch();
     const { _id: id, name, age, image, isFavourite, teaser } = mate;
     const imgFallback = "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=500";
 
     const handleFav = () => {
-        const currentMates = fromStorage(MATES_STORAGE);
-        const restMates = currentMates.filter((m) => m._id !== id);
-        const updatedMates = [{ ...mate, isFavourite: !isFavourite }, ...restMates];
-        toStorage(MATES_STORAGE, updatedMates);
-        setTeamMates(updatedMates);
+        // const currentMates = fromStorage(MATES_STORAGE);
+        // const restMates = currentMates.filter((m) => m._id !== id);
+        // const updatedMates = [{ ...mate, isFavourite: !isFavourite }, ...restMates];
+        dispatch(updateMate({ ...mate, isFavourite: !isFavourite }));
+        // toStorage(MATES_STORAGE, updatedMates);
+        // setTeamMates(updatedMates);
     };
     return (
         mate && (
@@ -22,7 +26,9 @@ const TeamMateCard = ({ mate, setTeamMates }) => {
                 <div className="card">
                     <Link className="text-body text-decoration-none" to={`/user/${id}`}>
                         <img
-                            src={image ? require(`/src/${image}`) : imgFallback}
+                            src={image
+? require(`/src/${image}`)
+: imgFallback}
                             className="card-img-top"
                             alt={name || ""}
                         />
@@ -54,7 +60,9 @@ const TeamMateCard = ({ mate, setTeamMates }) => {
                             action={handleFav}
                             handler={true}
                         >
-                            <i className={"bi fs-5 bi-star" + (isFavourite ? "-fill" : "")}></i>
+                            <i className={"bi fs-5 bi-star" + (isFavourite
+? "-fill"
+: "")}></i>
                         </Button>
                     </div>
                 </div>
