@@ -9,6 +9,7 @@ import skillsData from "../mockData/skills.json";
 import ProgressBar from "../components/common/progress";
 import Button from "app/components/common/button";
 import Badge from "app/components/common/badge";
+import declOfNum from "app/utils/age";
 const User = () => {
     const { userId } = useParams();
     const [teamMates, setTeamMates] = useState(fromStorage(MATES_STORAGE) || teamData);
@@ -87,7 +88,12 @@ const User = () => {
                                     <div className="card-body">
                                         <h5 className="card-title mb-0">{mate.name}</h5>
                                         <p className="card-text">
-                                            <small className="text-muted">{mate.age} лет</small>
+                                            <small className="text-muted">
+                                                {mate.age}{" "}
+                                                {mate.age
+                                                    ? declOfNum(mate.age, [" год", " года", " лет"])
+                                                    : ""}
+                                            </small>
                                         </p>
                                         <p className="card-text">{mate.teaser}</p>
                                     </div>

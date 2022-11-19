@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import declOfNum from "app/utils/age";
 import { Link } from "react-router-dom";
 import { MATES_STORAGE } from "../../constants/constants";
 import { fromStorage } from "../../utils/fromStorage";
@@ -33,7 +34,9 @@ const TeamMateCard = ({ mate, setTeamMates }) => {
                                 {name || ""}{" "}
                                 <span className="ms-2 badge bg-dark">
                                     {age || ""}
-                                    <span className="fw-normal fs-6 ms-1">лет</span>
+                                    <span className="fw-normal fs-6 ms-1">
+                                        {age ? declOfNum(age, [" год", " года", " лет"]) : ""}
+                                    </span>
                                 </span>
                             </Link>
                         </h5>
