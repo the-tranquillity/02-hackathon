@@ -12,7 +12,11 @@
                 "gh": "https://github.com/staelgit"
             }
         ],
-        "badges": ["2", "3"]
+        "badges": ["2", "3"],
+        "skills": [
+            { "skillId": "1", "value": 80 },
+            { "skillId": "5", "value": 80 }
+        ]
     },
     {
         "_id": 2,
@@ -24,12 +28,17 @@
         "isFavourite": false,
         "social": [
             {
-                "tg": "https://t.me/alexblackskja",
-                "vk": "https://vk.com/id97804117",
+                "tg": "https://t.me/alexblackskja"
+            },
+            {
                 "gh": "https://github.com/Al1988-Black"
             }
         ],
-        "badges": ["2", "5"]
+        "badges": ["2", "5"],
+        "skills": [
+            { "skillId": "1", "value": 80 },
+            { "skillId": "4", "value": 80 }
+        ]
     },
     {
         "_id": 3,
@@ -44,7 +53,12 @@
                 "gh": "https://github.com/the-tranquillity"
             }
         ],
-        "badges": ["1", "2"]
+        "badges": ["1", "2"],
+        "skills": [
+            { "skillId": "3", "value": 85 },
+            { "skillId": "2", "value": 70 },
+            { "skillId": "6", "value": 10 }
+        ]
     },
     {
         "_id": 4,
@@ -59,6 +73,10 @@
                 "gh": "https://github.com/AliBaibutov"
             }
         ],
-        "badges": ["2", "4"]
+        "badges": ["2", "4"],
+        "skills": [
+            { "skillId": "1", "value": 75 },
+            { "skillId": "5", "value": 85 }
+        ]
     }
 ]

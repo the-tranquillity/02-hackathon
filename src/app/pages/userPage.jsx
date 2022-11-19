@@ -1,4 +1,4 @@
-import { MATES_STORAGE } from "app/constants";
+import { MATES_STORAGE, SMEDIA } from "../constants/constants";
 import { fromStorage } from "app/utils/fromStorage";
 import { toStorage } from "app/utils/toStorage";
 import { useEffect, useState } from "react";
@@ -11,6 +11,8 @@ const User = () => {
     const [teamMates, setTeamMates] = useState(fromStorage(MATES_STORAGE) || teamMockData);
     const [mate, setMate] = useState({});
     const [mateBages, setMateBages] = useState([]);
+    const [mateSocial, setMateSocial] = useState([]);
+
     const fallbackImg = "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=500";
     useEffect(() => {
         if (!fromStorage(MATES_STORAGE)) {
@@ -23,6 +25,18 @@ const User = () => {
     useEffect(() => {
         if (Object.keys(mate).length && mate.badges.length) {
             setMateBages(mate.badges.map((b) => getBadgeById(b)));
+        }
+        if (Object.keys(mate).length && mate.social.length) {
+            const mappedSocial = mate.social.map((s, i) => {
+                const sKey = Object.keys(s)[0];
+                return {
+                    link: s[sKey],
+                    icon: SMEDIA[sKey].icoName,
+                    color: SMEDIA[sKey].icoBg,
+                    key: i
+                };
+            });
+            setMateSocial(mappedSocial);
         }
     }, [mate]);
 
@@ -80,6 +94,17 @@ const User = () => {
 
                         <div className="row">
                             <div className="col">
+                                {/* <!-- Moreinfo--> */}
+                                <div className="card mb-4">
+                                    <div className="card-body">
+                                        <h2 className="card-title h4">Роль в проекте</h2>
+                                        <p className="card-text">{mate.about}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col">
                                 {/* <!-- Role--> */}
                                 <div className="card mb-4">
                                     <div className="card-body">
@@ -120,10 +145,24 @@ const User = () => {
                                 </div>
                             </div>
                         </div>
-                        {/* <!-- Moreinfo widget--> */}
+                        {/* <!-- social widget--> */}
                         <div className="card mb-4">
-                            <div className="card-header">Роль в проекте</div>
-                            <div className="card-body">{mate.about}</div>
+                            <div className="card-header">Соцсети</div>
+                            <div className="card-body">
+                                {mateSocial.map((sm) => (
+                                    <a
+                                        target="_blank"
+                                        key={"media-key_" + sm.key}
+                                        href={sm.link}
+                                        rel="noreferrer"
+                                    >
+                                        <i
+                                            className={sm.color + " me-3 fs-3 bi bi-" + sm.icon}
+                                            title={sm.icon}
+                                        ></i>
+                                    </a>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
