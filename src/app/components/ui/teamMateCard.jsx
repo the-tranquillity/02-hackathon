@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { MATES_STORAGE } from "../../constants/constants";
 import { fromStorage } from "../../utils/fromStorage";
 import { toStorage } from "../../utils/toStorage";
+import Button from "../common/button";
 
 const TeamMateCard = ({ mate, setTeamMates }) => {
     const { _id: id, name, age, image, isFavourite, teaser } = mate;
@@ -39,15 +40,22 @@ const TeamMateCard = ({ mate, setTeamMates }) => {
                         <p className="card-text text-dark text-opacity-50">{teaser || ""}</p>
                     </div>
                     <div className="card-footer text-end mb-1 me-2 bg-white border-0 ">
-                        <Link className="text-primary me-4" to={`/user/${id}`}>
+                        <Button
+                            className="me-4"
+                            textColor="primary"
+                            to={`/user/${id}`}
+                            routerLink={true}
+                        >
                             <i className="bi bi-box-arrow-up-right fs-5"></i>
-                        </Link>
-                        <button
-                            className="border-0 bg-transparent text-primary"
-                            onClick={handleFav}
+                        </Button>
+                        <Button
+                            bgColor="transparent"
+                            textColor="primary"
+                            action={handleFav}
+                            handler={true}
                         >
                             <i className={"bi fs-5 bi-star" + (isFavourite ? "-fill" : "")}></i>
-                        </button>
+                        </Button>
                     </div>
                 </div>
             </div>

@@ -3,17 +3,16 @@ import orderBy from "lodash/orderBy";
 import { fromStorage } from "../utils/fromStorage";
 import { toStorage } from "../utils/toStorage";
 import { MATES_STORAGE } from "../constants/constants";
-import teamMockData from "../mockData/teamMates.json";
+import teamData from "../mockData/teamMates.json";
 import TeamMateCard from "../components/ui/teamMateCard";
 
 const Main = () => {
-    const [teamMates, setTeamMates] = useState(fromStorage(MATES_STORAGE) || teamMockData);
+    const [teamMates, setTeamMates] = useState(fromStorage(MATES_STORAGE) || teamData);
     useEffect(() => {
         if (!fromStorage(MATES_STORAGE)) {
             toStorage(MATES_STORAGE, teamMates);
         }
     }, [teamMates]);
-    // console.log('Mainpage mates', teamMates);
     const sortedMates = orderBy(teamMates, ["isFavourite"], ["desc"]);
     return (
         <div>
