@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import { fromStorage } from "../utils/fromStorage";
 import { toStorage } from "../utils/toStorage";
 import { MATES_STORAGE } from "../constants/constants";
-import teamMockData from "../mockData/teamMates.json";
+import teamData from "../mockData/teamMates.json";
 import TeamMateCard from "../components/ui/teamMateCard";
-import { Link } from "react-router-dom";
+import Button from "app/components/common/button";
 
 const Favourites = () => {
-    const [teamMates, setTeamMates] = useState(fromStorage(MATES_STORAGE) || teamMockData);
+    const [teamMates, setTeamMates] = useState(fromStorage(MATES_STORAGE) || teamData);
     useEffect(() => {
         if (!fromStorage(MATES_STORAGE)) {
             toStorage(MATES_STORAGE, teamMates);
@@ -27,9 +27,12 @@ const Favourites = () => {
 : (
                     <div className="col">
                         <p>В избранном пока никого нет.</p>
-                        <Link type="button" className="btn btn-primary" to="/">
-                            Посмотреть участников команды
-                        </Link>
+                        <Button
+                            bgColor="primary"
+                            to="/"
+                            routerLink={true}
+                            label="Посмотреть участников команды"
+                        />
                     </div>
                 )}
             </div>
