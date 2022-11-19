@@ -9,7 +9,7 @@ const NavBar = () => {
     const activLink = (active) => (active ? "nav-link active" : "nav-link");
     return (
         <header>
-            <nav className="navbar navbar-expand-lg bg-light">
+            <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
                 <div className="container-fluid">
                     <button
                         className="navbar-toggler"

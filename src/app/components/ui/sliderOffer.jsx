@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const SliderOffer = () => {
     const slides = [
@@ -10,7 +10,7 @@ const SliderOffer = () => {
             img_right:
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBGJ-eCypr-zQ6BUTSw3iJa-TFILqk0np71Q&usqp=CAU",
             offer: "Финиш близко, но это начало...",
-            text: "Меняемся сами, меняем наше окружение, меняем нашу жизнь. Это чувство, что все только начинается...",
+            text: "Меняемся сами, меняем наше окружение, меняем нашу жизнь. Это чувство, что все только начинается..."
         },
         {
             img_left:
@@ -20,7 +20,7 @@ const SliderOffer = () => {
             img_right:
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3jWLQ4WRCDH2z_0a0NHGZS-kgn0fo14eaTg&usqp=CAU",
             offer: "Что-то новенькое. Это хорошо",
-            text: "Новые знания, новые компетенции, новые возможноти - все это то что нам нужно и мы заберем ВСЕ!",
+            text: "Новые знания, новые компетенции, новые возможноти - все это то что нам нужно и мы заберем ВСЕ!"
         },
         {
             img_left:
@@ -30,8 +30,8 @@ const SliderOffer = () => {
             img_right:
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqEv_Rb8q6r8SoQ9gwzRiRhV5pS0itOglAzQ&usqp=CAU",
             offer: "Двигаемся только вперед",
-            text: "Мы знаем свои цели, не боимся трудных задач и идем к своей мечте, снося все приграды на пути",
-        },
+            text: "Мы знаем свои цели, не боимся трудных задач и идем к своей мечте, снося все приграды на пути"
+        }
     ];
     const [index, setIndex] = useState(0);
     const indexUpdate = () => {
@@ -50,60 +50,28 @@ const SliderOffer = () => {
                 <div className="row">
                     <div className="col-12 col-lg-7">
                         <div className="offer-slider">
-                            <div
-                                className={
-                                    "offer" +
-                                    (index === 0 ? " d-block" : " d-none")
-                                }
-                            >
-                                <h1 className="offer__title">
-                                    {slides[0].offer}
-                                </h1>
+                            <div className={"offer" + (index === 0 ? " d-block" : " d-none")}>
+                                <h1 className="offer__title">{slides[0].offer}</h1>
                                 <div className="offer__block">
-                                    <p className="offer__text">
-                                        {slides[0].text}
-                                    </p>
+                                    <p className="offer__text">{slides[0].text}</p>
                                 </div>
                             </div>
-                            <div
-                                className={
-                                    "offer" +
-                                    (index === 1 ? " d-block" : " d-none")
-                                }
-                            >
-                                <h1 className="offer__title">
-                                    {slides[1].offer}
-                                </h1>
+                            <div className={"offer" + (index === 1 ? " d-block" : " d-none")}>
+                                <h1 className="offer__title">{slides[1].offer}</h1>
                                 <div className="offer__block">
-                                    <p className="offer__text">
-                                        {slides[1].text}
-                                    </p>
+                                    <p className="offer__text">{slides[1].text}</p>
                                 </div>
                             </div>
-                            <div
-                                className={
-                                    "offer" +
-                                    (index === 2 ? " d-block" : " d-none")
-                                }
-                            >
-                                <h1 className="offer__title">
-                                    {slides[2].offer}
-                                </h1>
+                            <div className={"offer" + (index === 2 ? " d-block" : " d-none")}>
+                                <h1 className="offer__title">{slides[2].offer}</h1>
                                 <div className="offer__block">
-                                    <p className="offer__text">
-                                        {slides[2].text}
-                                    </p>
+                                    <p className="offer__text">{slides[2].text}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="col-12 col-lg-5 d-flex justify-content-center justify-content-lg-end">
-                        <div
-                            className={
-                                "offer-img" +
-                                (index === 0 ? " d-block" : " d-none")
-                            }
-                        >
+                        <div className={"offer-img" + (index === 0 ? " d-block" : " d-none")}>
                             <div className="offer-img-slider">
                                 <div className="offer-img-wrapper">
                                     <img
@@ -126,12 +94,7 @@ const SliderOffer = () => {
                                 id="offer-img__smallphoto-right"
                             />
                         </div>
-                        <div
-                            className={
-                                "offer-img" +
-                                (index === 1 ? " d-block" : " d-none")
-                            }
-                        >
+                        <div className={"offer-img" + (index === 1 ? " d-block" : " d-none")}>
                             <div className="offer-img-slider">
                                 <div className="offer-img-wrapper">
                                     <img
@@ -154,12 +117,7 @@ const SliderOffer = () => {
                                 id="offer-img__smallphoto-right"
                             />
                         </div>
-                        <div
-                            className={
-                                "offer-img" +
-                                (index === 2 ? " d-block" : " d-none")
-                            }
-                        >
+                        <div className={"offer-img" + (index === 2 ? " d-block" : " d-none")}>
                             <div className="offer-img-slider">
                                 <div className="offer-img-wrapper">
                                     <img
