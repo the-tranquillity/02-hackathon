@@ -2,7 +2,7 @@
     {
         "_id": 1,
         "name": "Юрий Стахнев",
-        "age": 25,
+        "age": 44,
         "image": null,
         "teaser": "Тизер: Sed iaculis in sem sit amet consectetur. Suspendisse aliquet neque vel elit suscipit iaculis.",
         "about": "В проекте Hackathon #2 реализовал Router, компоненты Progress и Badge",
@@ -14,8 +14,11 @@
         ],
         "badges": ["2", "3"],
         "skills": [
-            { "skillId": "1", "value": 80 },
-            { "skillId": "5", "value": 80 }
+            { "skillId": "5", "value": 80 },
+            { "skillId": "4", "value": 70 },
+            { "skillId": "3", "value": 60 },
+            { "skillId": "2", "value": 85 },
+            { "skillId": "1", "value": 70 }
         ]
     },
     {
@@ -36,8 +39,11 @@
         ],
         "badges": ["2", "5"],
         "skills": [
-            { "skillId": "1", "value": 80 },
-            { "skillId": "4", "value": 80 }
+            { "skillId": "5", "value": 72 },
+            { "skillId": "4", "value": 77 },
+            { "skillId": "3", "value": 58 },
+            { "skillId": "2", "value": 79 },
+            { "skillId": "1", "value": 75 }
         ]
     },
     {
@@ -63,9 +69,9 @@
     {
         "_id": 4,
         "name": "Али-Хан Байбутов",
-        "age": 25,
+        "age": 27,
         "image": null,
-        "teaser": "Тизер: Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+        "teaser": "Студент result school, в прошлом — инженер-конструктор. Люблю занятия спортом, в частности, офп, футбол. Играю на фортепиано и гитаре.",
         "about": "В проекте Hackathon #2 реализовал компоненты Button и Breadcrumbs",
         "isFavourite": false,
         "social": [
@@ -73,10 +79,12 @@
                 "gh": "https://github.com/AliBaibutov"
             }
         ],
-        "badges": ["2", "4"],
+        "badges": ["2"],
         "skills": [
-            { "skillId": "1", "value": 75 },
-            { "skillId": "5", "value": 85 }
+            { "skillId": "5", "value": 60 },
+            { "skillId": "4", "value": 70 },
+            { "skillId": "2", "value": 58 },
+            { "skillId": "1", "value": 50 }
         ]
     }
 ]
