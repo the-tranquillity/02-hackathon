@@ -22,6 +22,7 @@
         "prettier/prettier": 0,
         "semi": ["error", "always"],
         "useTabs": 0,
+        "multiline-ternary": ["error", "always-multiline"],
         "space-before-function-paren": [
             "error",
             {

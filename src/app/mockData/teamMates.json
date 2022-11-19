@@ -1,64 +1,64 @@
 [
-  {
-    "_id": 1,
-    "name": "Юрий Стахнев",
-    "age": 25,
-    "image": null,
-    "teaser": "Sed iaculis in sem sit amet consectetur. Suspendisse aliquet neque vel elit suscipit iaculis.",
-    "about": "В проекте Hackathon #2 реализовал Router, компоненты Progress и Badge",
-    "isFavourite": false,
-    "social": [
-      {
-        "gh": "https://github.com/staelgit"
-      }
-    ],
-    "badges": ["2", "3"]
-  },
-  {
-    "_id": 2,
-    "name": "Алексей Чернов",
-    "age": 34,
-    "image": "app/assets/imgs/avatars/aleksej-chernov.jpg",
-    "teaser": "Хочу развития, поэтому решил стать программистом и работать в самой развивающей отрасли",
-    "about": "В проекте Hackathon #2 реализовал компоненты Navbar и Slide",
-    "isFavourite": false,
-    "social": [
-      {
-        "tg": "https://t.me/alexblackskja",
-        "vk": "https://vk.com/id97804117",
-        "gh": "https://github.com/Al1988-Black"
-      }
-    ],
-    "badges": ["2", "5"]
-  },
-  {
-    "_id": 3,
-    "name": "Михаил Катьянов",
-    "age": 36,
-    "image": "app/assets/imgs/avatars/mikhail-katyanov.jpg",
-    "teaser": "Предприниматель, веб-мастер, начинающий форонтэндер.",
-    "about": "В проекте Hackathon #2 реализовал UI, сатраницы и компонент «карточка участника команды»",
-    "isFavourite": false,
-    "social": [
-      {
-        "gh": "https://github.com/the-tranquillity"
-      }
-    ],
-    "badges": ["1", "2"]
-  },
-  {
-    "_id": 4,
-    "name": "Али-Хан Байбутов",
-    "age": 25,
-    "image": null,
-    "teaser": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    "about": "В проекте Hackathon #2 реализовал компоненты Button и Breadcrumbs",
-    "isFavourite": false,
-    "social": [
-      {
-        "gh": "https://github.com/AliBaibutov"
-      }
-    ],
-    "badges": ["2", "4"]
-  }
+    {
+        "_id": 1,
+        "name": "Юрий Стахнев",
+        "age": 25,
+        "image": null,
+        "teaser": "Тизер: Sed iaculis in sem sit amet consectetur. Suspendisse aliquet neque vel elit suscipit iaculis.",
+        "about": "В проекте Hackathon #2 реализовал Router, компоненты Progress и Badge",
+        "isFavourite": false,
+        "social": [
+            {
+                "gh": "https://github.com/staelgit"
+            }
+        ],
+        "badges": ["2", "3"]
+    },
+    {
+        "_id": 2,
+        "name": "Алексей Чернов",
+        "age": 34,
+        "image": "app/assets/imgs/avatars/aleksej-chernov.jpg",
+        "teaser": "Хочу развития, поэтому решил стать программистом и работать в самой развивающей отрасли",
+        "about": "В проекте Hackathon #2 реализовал компоненты Navbar и Slide",
+        "isFavourite": false,
+        "social": [
+            {
+                "tg": "https://t.me/alexblackskja",
+                "vk": "https://vk.com/id97804117",
+                "gh": "https://github.com/Al1988-Black"
+            }
+        ],
+        "badges": ["2", "5"]
+    },
+    {
+        "_id": 3,
+        "name": "Михаил Катьянов",
+        "age": 36,
+        "image": "app/assets/imgs/avatars/mikhail-katyanov.jpg",
+        "teaser": "Предприниматель, веб-мастер, начинающий форонтэндер.",
+        "about": "В проекте Hackathon #2 реализовал UI, сатраницы и компонент «карточка участника команды»",
+        "isFavourite": false,
+        "social": [
+            {
+                "gh": "https://github.com/the-tranquillity"
+            }
+        ],
+        "badges": ["1", "2"]
+    },
+    {
+        "_id": 4,
+        "name": "Али-Хан Байбутов",
+        "age": 25,
+        "image": null,
+        "teaser": "Тизер: Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+        "about": "В проекте Hackathon #2 реализовал компоненты Button и Breadcrumbs",
+        "isFavourite": false,
+        "social": [
+            {
+                "gh": "https://github.com/AliBaibutov"
+            }
+        ],
+        "badges": ["2", "4"]
+    }
 ]
