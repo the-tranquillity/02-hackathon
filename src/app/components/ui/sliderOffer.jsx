@@ -50,19 +50,25 @@ const SliderOffer = () => {
                 <div className="row">
                     <div className="col-12 col-lg-7">
                         <div className="offer-slider">
-                            <div className={"offer" + (index === 0 ? " d-block" : " d-none")}>
+                            <div className={"offer" + (index === 0
+? " d-block"
+: " d-none")}>
                                 <h1 className="offer__title">{slides[0].offer}</h1>
                                 <div className="offer__block">
                                     <p className="offer__text">{slides[0].text}</p>
                                 </div>
                             </div>
-                            <div className={"offer" + (index === 1 ? " d-block" : " d-none")}>
+                            <div className={"offer" + (index === 1
+? " d-block"
+: " d-none")}>
                                 <h1 className="offer__title">{slides[1].offer}</h1>
                                 <div className="offer__block">
                                     <p className="offer__text">{slides[1].text}</p>
                                 </div>
                             </div>
-                            <div className={"offer" + (index === 2 ? " d-block" : " d-none")}>
+                            <div className={"offer" + (index === 2
+? " d-block"
+: " d-none")}>
                                 <h1 className="offer__title">{slides[2].offer}</h1>
                                 <div className="offer__block">
                                     <p className="offer__text">{slides[2].text}</p>
@@ -71,7 +77,9 @@ const SliderOffer = () => {
                         </div>
                     </div>
                     <div className="col-12 col-lg-5 d-flex justify-content-center justify-content-lg-end">
-                        <div className={"offer-img" + (index === 0 ? " d-block" : " d-none")}>
+                        <div className={"offer-img" + (index === 0
+? " d-block"
+: " d-none")}>
                             <div className="offer-img-slider">
                                 <div className="offer-img-wrapper">
                                     <img
@@ -94,7 +102,9 @@ const SliderOffer = () => {
                                 id="offer-img__smallphoto-right"
                             />
                         </div>
-                        <div className={"offer-img" + (index === 1 ? " d-block" : " d-none")}>
+                        <div className={"offer-img" + (index === 1
+? " d-block"
+: " d-none")}>
                             <div className="offer-img-slider">
                                 <div className="offer-img-wrapper">
                                     <img
@@ -117,7 +127,9 @@ const SliderOffer = () => {
                                 id="offer-img__smallphoto-right"
                             />
                         </div>
-                        <div className={"offer-img" + (index === 2 ? " d-block" : " d-none")}>
+                        <div className={"offer-img" + (index === 2
+? " d-block"
+: " d-none")}>
                             <div className="offer-img-slider">
                                 <div className="offer-img-wrapper">
                                     <img

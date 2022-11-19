@@ -1,20 +1,18 @@
-import { useEffect, useState } from "react";
-import orderBy from "lodash/orderBy";
-import { fromStorage } from "../utils/fromStorage";
-import { toStorage } from "../utils/toStorage";
-import { MATES_STORAGE } from "../constants/constants";
-import teamData from "../mockData/teamMates.json";
+import { useEffect } from "react";
 import TeamMateCard from "../components/ui/teamMateCard";
+import { useDispatch, useSelector } from "react-redux";
+import { getMates, getMatesLoadingStatus, loadMates } from "../store/mates";
+import Loader from "app/components/ui/loader";
 
 const Main = () => {
-    const [teamMates, setTeamMates] = useState(fromStorage(MATES_STORAGE) || teamData);
+    const dispatch = useDispatch();
+    const mates = useSelector(getMates());
+    const isLoading = useSelector(getMatesLoadingStatus());
     useEffect(() => {
-        if (!fromStorage(MATES_STORAGE)) {
-            toStorage(MATES_STORAGE, teamMates);
-        }
-    }, [teamMates]);
-    const sortedMates = orderBy(teamMates, ["isFavourite"], ["desc"]);
-    return (
+        dispatch(loadMates());
+    }, [isLoading]);
+    return mates
+? (
         <div>
             <h1>О нашей команде</h1>
             <p>
@@ -31,11 +29,14 @@ const Main = () => {
             </p>
             <h2 className="my-2">Участники</h2>
             <div className="row row-cols-1 row-cols-md-2 g-4 mt-2">
-                {sortedMates.map((m) => (
-                    <TeamMateCard key={m._id} mate={m} setTeamMates={setTeamMates} />
+                {mates.map((m) => (
+                    <TeamMateCard key={m._id} mate={m} />
                 ))}
             </div>
         </div>
+    )
+: (
+        <Loader />
     );
 };
 
