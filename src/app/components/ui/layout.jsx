@@ -1,5 +1,6 @@
 import { Outlet, useLocation } from "react-router-dom";
 import Breadcrumbs from "../common/breadcrumbs";
+import Footer from "./footer";
 import NavBar from "./navBar";
 
 const Layout = () => {
@@ -13,6 +14,7 @@ const Layout = () => {
                 </div>
             )}
             <Outlet />
+            <Footer />
         </>
     );
 };
