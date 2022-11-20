@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import Button from "../common/button";
 import declOfNum from "app/utils/age";
+import ReactAutosyncHeight from "react-autosync-height";
 
 const FavMateCard = ({ mate }) => {
     const dispatch = useDispatch();
@@ -24,7 +25,7 @@ const FavMateCard = ({ mate }) => {
                             alt={name || ""}
                         />
                     </Link>
-                    <div className="card-body  bg-[#2D3035] pb-0">
+                    <div className="card-body  bg-[#2D3035] pb-0 equal-height">
                         <h5 className="card-title">
                             <Link className="text-body text-decoration-none" to={`/user/${id}`}>
                                 {name || ""}{" "}
@@ -33,7 +34,12 @@ const FavMateCard = ({ mate }) => {
                                 </span>
                             </Link>
                         </h5>
-                        <p className="card-text text-dark text-opacity-50">{teaser || ""}</p>
+                        <ReactAutosyncHeight
+                            id="teaser"
+                            className="card-text text-dark text-opacity-50"
+                        >
+                            {teaser || ""}
+                        </ReactAutosyncHeight>
                     </div>
 
                     <div className="bg-[#2D3035] rounded-b-lg text-end mb-1 me-2 border-0 flex justify-end pr-2">

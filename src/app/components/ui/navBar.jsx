@@ -2,7 +2,7 @@ import useHeightReacher from "app/hooks/useHeightReacher";
 import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
-    const { isReached } = useHeightReacher(64);
+    const { isReached } = useHeightReacher(10);
     const activLink = (active) => (active ? "text-white bg-transparent" : "text-slate-300");
     return (
         <div
