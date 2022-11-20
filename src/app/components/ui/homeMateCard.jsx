@@ -3,6 +3,7 @@ import { updateMate } from "app/store/mates";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import Button from "../common/button";
+import declOfNum from "app/utils/age";
 
 const HomeMateCard = ({ mate, side }) => {
     const dispatch = useDispatch();
@@ -43,8 +44,7 @@ const HomeMateCard = ({ mate, side }) => {
                             >
                                 {name || ""}{" "}
                                 <span className="ms-2 badge bg-dark">
-                                    {age || ""}
-                                    <span className="fw-normal fs-6 ms-1">&nbsp;лет</span>
+                                    {age} {age ? declOfNum(age, [" год", " года", " лет"]) : ""}
                                 </span>
                             </Link>
                         </h2>

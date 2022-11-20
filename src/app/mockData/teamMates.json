@@ -3,8 +3,8 @@
         "_id": 1,
         "name": "Юрий Стахнев",
         "age": 44,
-        "image": null,
-        "teaser": "Тизер: Sed iaculis in sem sit amet consectetur. Suspendisse aliquet neque vel elit suscipit iaculis.",
+        "image": "app/assets/imgs/avatars/yurij-stakhnev.jpg",
+        "teaser": "Начинающий Front-end разработчик. Целеустремлен. Трудолюбив. Люблю решать интересные задачи, реализовывать необычные идеи.",
         "about": "В проекте Hackathon #2 реализовал Router, компоненты Progress и Badge",
         "isFavourite": false,
         "social": [

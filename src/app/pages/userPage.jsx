@@ -10,6 +10,7 @@ import Loader from "app/components/ui/loader";
 import ProgressBar from "../components/common/progress";
 import Button from "app/components/common/button";
 import Badge from "app/components/common/badge";
+import declOfNum from "app/utils/age";
 const parse = require("html-react-parser");
 
 const User = () => {
@@ -79,8 +80,13 @@ const User = () => {
                             />
                         </figure>
                         <div className="card-body bg-[#2D3035] rounded-lg mt-6 lg:mt-0 pb-3">
-                            <h2 className="mt-1 card-title text-white text-3xl mb-3">
+                            <h2 className="mt-1 card-title text-white text-3xl mb-3 font-bold">
                                 {mate.name}
+                                <br />
+                                <span className="text-sm ml-4">
+                                    {mate.age}{" "}
+                                    {mate.age ? declOfNum(mate.age, [" год", " года", " лет"]) : ""}
+                                </span>
                             </h2>
                             <p>{mate.teaser}</p>
                             <div className="card-actions justify-end">
