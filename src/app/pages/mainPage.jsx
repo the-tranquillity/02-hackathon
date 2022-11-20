@@ -58,12 +58,12 @@ const Main = () => {
                 <div className="hero-content w-full">
                     <div className="container text-3xl">
                         <p>
-                            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-                            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a
-                            id nisi.
+                            Мы знаем свои цели, не боимся трудных задач и идем к своей мечте, снося
+                            все преграды на пути.
                         </p>
                         <p className="mt-6">
-                            Curabitur laoreet ante turpis, porttitor mattis dui finibus non.
+                            Решаем задачи планомерно, усиливаем друг друга и работаем на наилучший
+                            результат.
                         </p>
                     </div>
                 </div>

@@ -1,7 +1,16 @@
 import PropTypes from "prop-types";
 
-const Badge = ({ bgColor, textColor, label }) => {
-    return <span className={"font-medium badge badge-lg badge-" + bgColor}>{label}</span>;
+const Badge = ({ bgColor, textColor = "white", label }) => {
+    const style = {
+        fontWeight: 500,
+        backgroundColor: bgColor,
+        color: textColor
+    };
+    return (
+        <span className={"rounded py-0.5 px-4"} style={style}>
+            {label}
+        </span>
+    );
 };
 
 Badge.defaultProps = {

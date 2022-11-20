@@ -16,8 +16,26 @@ body {
 .cst-text-end {
     text-align: center;
 }
-
+.prg:before,
+.prg:after {
+    display: none;
+}
+.prg {
+    text-align: center;
+}
+.prg-responsive {
+    display: inherit;
+    margin-top: 1rem;
+    font-size: 2rem;
+}
 @screen lg {
+    .prg-responsive {
+        display: none;
+    }
+    .prg:before,
+    .prg:after {
+        display: block;
+    }
     .cst-text-start {
         text-align: start;
     }

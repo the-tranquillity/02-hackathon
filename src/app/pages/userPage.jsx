@@ -67,10 +67,10 @@ const User = () => {
     };
 
     return mate ? (
-        <div className="flex flex-col container mx-auto mt-8 pb-14">
-            <div className="flex-1 flex flex-col xl:flex-row gap-8 xl:gap-11">
-                <div className="flex flex-col gap-y-8 xl:gap-y-11">
-                    <div className="card lg:card-side bg-base-100 shadow-xl">
+        <div className="flex flex-col container mx-auto mt-8 pb-14 px-3 lg:px-0">
+            <div className="flex flex-col xl:flex-row gap-8 xl:gap-11">
+                <div className="flex flex-col gap-y-8 xl:gap-y-11 w-full xl:w-3/4">
+                    <div className="card lg:card-side lg:shadow-xl">
                         <figure className=" lg:rounded-b-lg lg:rounded-l-lg">
                             <img
                                 src={mate.image ? require(`/src/${mate.image}`) : fallbackImg}
@@ -78,7 +78,7 @@ const User = () => {
                                 className="rounded lg:rounded-none"
                             />
                         </figure>
-                        <div className="card-body bg-[#2D3035] rounded-lg mt-6 lg:mt-0 ">
+                        <div className="card-body bg-[#2D3035] rounded-lg mt-6 lg:mt-0 pb-3">
                             <h2 className="mt-1 card-title text-white text-3xl mb-3">
                                 {mate.name}
                             </h2>
@@ -121,7 +121,7 @@ const User = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col gap-y-8">
+                <div className="flex flex-col gap-y-8  w-full xl:w-1/4">
                     <div className="card bg-[#2D3035] shadow-xl">
                         <div className="card-body  rounded-lg">
                             <h2 className="card-title text-white mb-4">Tags</h2>
@@ -141,7 +141,7 @@ const User = () => {
                         </div>
                     </div>
                     <div className="card bg-[#2D3035] shadow-xl">
-                        <div className="card-body  rounded-lg">
+                        <div className="card-body rounded-lg">
                             <h2 className="card-title text-white mb-4">Соцсети</h2>
                             <div className="flex gap-4">
                                 {mateSocial ? (

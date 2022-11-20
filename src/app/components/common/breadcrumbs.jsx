@@ -9,16 +9,14 @@ const Breadcrumbs = () => {
     return (
         <div className="d-flex align-items-center">
             {breadcrumbs.map(({ match, breadcrumb }, i) =>
-                breadcrumbs.length > i + 1
-? (
+                breadcrumbs.length > i + 1 ? (
                     <span key={"bc-key" + i}>
                         <NavLink key={"bc-key-" + i} to={match.pathname}>
                             <small>{breadcrumb}</small>
                         </NavLink>
                         {rihgt}
                     </span>
-                )
-: (
+                ) : (
                     <small key={"bc-key-" + i}>{breadcrumb}</small>
                 )
             )}

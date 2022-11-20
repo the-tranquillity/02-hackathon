@@ -21,15 +21,21 @@ const ProgressBar = ({ progressData }) => {
             // const circleProgressLength = (circleLength * prog) / 100;
             // const st = `--value:70%;`;
             // style={{marginRight: spacing + 'em'}}
-            const sstyle = {
+            const style = {
                 "--value": prog,
                 "--size": size + "rem",
                 "--thickness": 2 + "px",
                 color
             };
+            const respColor = { color };
             return (
-                <div className={"radial-progress"} style={sstyle}>
-                    <span className="text-white">{name}</span>
+                <div className={"radial-progress prg"} style={style}>
+                    <span className="text-white">
+                        {name}
+                        <span className="prg-responsive" style={respColor}>
+                            {prog + "%"}
+                        </span>
+                    </span>
                 </div>
             );
         }
