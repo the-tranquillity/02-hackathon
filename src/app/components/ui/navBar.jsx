@@ -40,6 +40,11 @@ const NavBar = () => {
                 <div className="navbar-end hidden lg:flex">
                     <ul className="menu menu-horizontal p-0 font-medium">
                         <li>
+                            <NavLink className={({ isActive }) => activLink(isActive)} to="/mates">
+                                Участники
+                            </NavLink>
+                        </li>
+                        <li>
                             <NavLink
                                 className={({ isActive }) => activLink(isActive)}
                                 to="/favourites"

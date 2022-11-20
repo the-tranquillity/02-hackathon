@@ -2,10 +2,11 @@
 import { Navigate, useParams } from "react-router-dom";
 import Layout from "../components/ui/layout";
 import NotFound from "../pages/notFound";
-import Favourites from "../pages/favourites";
+import Favourites from "../pages/matesFav";
 import Main from "../pages/mainPage";
-import User from "../pages/userPage";
+import User from "../pages/mateProfile";
 import teamData from "../mockData/teamMates.json";
+import Mates from "app/pages/matesRest";
 
 const DynamicUserBreadcrumb = ({ match }) => {
     const bcUser = teamData.find((m) => +m._id === +match.params.userId);
@@ -16,7 +17,7 @@ const UsersRedirect = () => {
     const { userId } = useParams();
     return <Navigate to={`/user/${userId}`} />;
 };
-// DynamicUserBreadcrumb
+
 export const routes = [
     {
         path: "/",
@@ -34,7 +35,7 @@ export const routes = [
                     {
                         index: true,
 
-                        element: <Navigate to="1" />
+                        element: <Navigate to="../mates" />
                     },
                     {
                         path: ":userId",
@@ -71,6 +72,11 @@ export const routes = [
                 path: "favourites",
                 breadcrumb: "Избранное",
                 element: <Favourites />
+            },
+            {
+                path: "mates",
+                breadcrumb: "Участники",
+                element: <Mates />
             },
             {
                 path: "*",

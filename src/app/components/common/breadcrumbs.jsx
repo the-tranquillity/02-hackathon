@@ -5,7 +5,7 @@ import useBreadcrumbs from "use-react-router-breadcrumbs";
 const Breadcrumbs = () => {
     const breadcrumbs = useBreadcrumbs(routes);
     return (
-        <div className=" my-4 shrink-0 container mx-auto px-2">
+        <div className=" my-4 shrink-0 container mx-auto">
             <div className="text-sm breadcrumbs">
                 <ul>
                     {breadcrumbs.map(({ match, breadcrumb }, i) => (

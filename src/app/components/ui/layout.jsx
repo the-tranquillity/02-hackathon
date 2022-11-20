@@ -9,7 +9,7 @@ const Layout = () => {
         <div className="min-h-screen flex flex-col items-stretch">
             <NavBar />
             {location.pathname !== "/" && <Breadcrumbs />}
-            <main className="grow shrink-0 px-1">
+            <main className="grow shrink-0 px-1.5">
                 <Outlet />
             </main>
             <Footer />

@@ -21,23 +21,20 @@ const FavMateCard = ({ mate }) => {
                     <Link className="text-body text-decoration-none" to={`/user/${id}`}>
                         <img
                             src={image ? require(`/src/${image}`) : imgFallback}
-                            className="card-img-top rounded-t-lg"
+                            className="card-img-top rounded-t-lg w-full"
                             alt={name || ""}
                         />
                     </Link>
                     <div className="card-body  bg-[#2D3035] pb-0 equal-height">
                         <h5 className="card-title">
-                            <Link className="text-body text-decoration-none" to={`/user/${id}`}>
+                            <Link className="text-white text-decoration-none" to={`/user/${id}`}>
                                 {name || ""}{" "}
                                 <span className="ms-2 badge bg-dark">
                                     {age} {age ? declOfNum(age, [" год", " года", " лет"]) : ""}
                                 </span>
                             </Link>
                         </h5>
-                        <ReactAutosyncHeight
-                            id="teaser"
-                            className="card-text text-dark text-opacity-50"
-                        >
+                        <ReactAutosyncHeight className="card-text text-dark text-opacity-50">
                             {teaser || ""}
                         </ReactAutosyncHeight>
                     </div>
