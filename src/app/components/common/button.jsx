@@ -12,6 +12,7 @@ const Button = ({
     action,
     noBorder,
     tsptHover,
+    moreClasses,
     handler
 }) => {
     const classes =
@@ -23,7 +24,9 @@ const Button = ({
         " " +
         (textColor ? "text-" + textColor : "") +
         " " +
-        (noBorder ? "border-0" : "");
+        (noBorder ? "border-0" : "") +
+        " " +
+        (moreClasses || "");
 
     if (routerLink) {
         return (
@@ -54,6 +57,7 @@ Button.propTypes = {
     action: PropTypes.func,
     noBorder: PropTypes.bool,
     tsptHover: PropTypes.bool,
+    moreClasses: PropTypes.string,
     handler: PropTypes.bool
 };
 
