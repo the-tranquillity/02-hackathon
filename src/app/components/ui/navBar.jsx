@@ -7,7 +7,7 @@ const NavBar = () => {
     return (
         <div
             className={
-                "sticky top-0 navbar nav-custom py-[14px] z-40 " +
+                "sticky shrink-0 top-0 navbar nav-custom py-[14px] z-40 " +
                 (isReached ? "bg-[#0D0D0D]" : "bg-transparent")
             }
         >

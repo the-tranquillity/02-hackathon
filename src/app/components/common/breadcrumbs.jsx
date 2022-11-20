@@ -7,7 +7,7 @@ const Breadcrumbs = () => {
     const breadcrumbs = useBreadcrumbs(routes);
     const rihgt = <span className="mx-2">{"/"}</span>;
     return (
-        <div className="d-flex align-items-center">
+        <div className="d-flex align-items-center my-4 shrink-0 container mx-auto">
             {breadcrumbs.map(({ match, breadcrumb }, i) =>
                 breadcrumbs.length > i + 1 ? (
                     <span key={"bc-key" + i}>

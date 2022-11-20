@@ -6,17 +6,19 @@ import NavBar from "./navBar";
 const Layout = () => {
     const location = useLocation();
     return (
-        <>
+        <div className="min-h-screen flex flex-col items-stretch">
             <NavBar />
-            {location.pathname !== "/" && (
-                <div className="my-4 container mx-auto">
-                    <Breadcrumbs />
-                </div>
-            )}
-            <Outlet />
+            {location.pathname !== "/" && <Breadcrumbs />}
+            <main className="grow shrink-0">
+                <Outlet />
+            </main>
             <Footer />
-        </>
+        </div>
     );
 };
 
 export default Layout;
+/*
+shrink-0
+
+*/
