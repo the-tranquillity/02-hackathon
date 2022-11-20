@@ -115,7 +115,7 @@ const User = () => {
                     <div className="card bg-[#2D3035] shadow-xl">
                         <div className="card-body  rounded-lg">
                             <h2 className="card-title text-white mb-4">Навыки</h2>
-                            <div>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-12">
                                 {mateSkills ? (
                                     mateSkills.map((s) => (
                                         <ProgressBar key={s._id} progressData={s} />

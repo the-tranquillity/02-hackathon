@@ -20,17 +20,17 @@ const ProgressBar = ({ progressData }) => {
             );
         }
         case "circle": {
-            const strokeWidth = width / 10;
+            const strokeWidth = width / 15;
             const radius = width / 2 - strokeWidth;
             const circleProgressLength = (2 * 3.14 * radius * progress) / 100;
             return (
-                <div className="inline-block mr-4">
-                    <h5 className={`text-center`} style={{ color: `${color}` }}>
+                <div className="flex flex-col items-center">
+                    <h5 className={`text-center mb-4 font-medium`} style={{ color: `${color}` }}>
                         {name}
                     </h5>
                     <div className="relative">
                         <span
-                            className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`}
+                            className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xl`}
                             style={{ color: `${color}` }}
                         >{`${progress}%`}</span>
                         <svg
@@ -58,7 +58,7 @@ const ProgressBar = ({ progressData }) => {
                                 fill="transparent"
                                 stroke="currentColor"
                                 strokeWidth={strokeWidth}
-                                strokeOpacity=".2"
+                                strokeOpacity=".15"
                             ></circle>
                         </svg>
                     </div>
