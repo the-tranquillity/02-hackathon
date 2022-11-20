@@ -1,0 +1,32 @@
+[
+    {
+        "_id": "1",
+        "name": "React",
+        "color": "#60a5fa"
+    },
+    {
+        "_id": "2",
+        "name": "CSS",
+        "color": "#84cc16"
+    },
+    {
+        "_id": "3",
+        "name": "Design & UI",
+        "color": "#14b8a6"
+    },
+    {
+        "_id": "4",
+        "name": "JS",
+        "color": "#eab308"
+    },
+    {
+        "_id": "5",
+        "name": "HTML",
+        "color": "#94a3b8"
+    },
+    {
+        "_id": "6",
+        "name": "TypeScript",
+        "color": "#06b6d4"
+    }
+]

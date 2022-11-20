@@ -1,0 +1,90 @@
+[
+    {
+        "_id": 1,
+        "name": "Юрий Стахнев",
+        "age": 44,
+        "image": "app/assets/imgs/avatars/yurij-stakhnev.jpg",
+        "teaser": "Начинающий Front-end разработчик. Целеустремлен. Трудолюбив. Люблю решать интересные задачи, реализовывать необычные идеи.",
+        "about": "В проекте Hackathon #2 реализовал Router, компоненты Progress и Badge",
+        "isFavourite": false,
+        "social": [
+            {
+                "gh": "https://github.com/staelgit"
+            }
+        ],
+        "badges": ["2", "3"],
+        "skills": [
+            { "skillId": "5", "value": 80 },
+            { "skillId": "4", "value": 70 },
+            { "skillId": "3", "value": 60 },
+            { "skillId": "2", "value": 85 },
+            { "skillId": "1", "value": 70 }
+        ]
+    },
+    {
+        "_id": 2,
+        "name": "Алексей Чернов",
+        "age": 34,
+        "image": "app/assets/imgs/avatars/aleksej-chernov.jpg",
+        "teaser": "Хочу развития, поэтому решил стать программистом и работать в самой развивающей отрасли",
+        "about": "В проекте Hackathon #2 реализовал компоненты Navbar и Slide",
+        "isFavourite": false,
+        "social": [
+            {
+                "tg": "https://t.me/alexblackskja"
+            },
+            {
+                "gh": "https://github.com/Al1988-Black"
+            }
+        ],
+        "badges": ["2", "5"],
+        "skills": [
+            { "skillId": "5", "value": 72 },
+            { "skillId": "4", "value": 77 },
+            { "skillId": "3", "value": 58 },
+            { "skillId": "2", "value": 79 },
+            { "skillId": "1", "value": 75 }
+        ]
+    },
+    {
+        "_id": 3,
+        "name": "Михаил Катьянов",
+        "age": 36,
+        "image": "app/assets/imgs/avatars/mikhail-katyanov.jpg",
+        "teaser": "Предприниматель, веб-мастер, начинающий форонтэндер.",
+        "about": "В проекте Hackathon #2 реализовал UI, сатраницы и компонент «карточка участника команды»",
+        "isFavourite": false,
+        "social": [
+            {
+                "gh": "https://github.com/the-tranquillity"
+            }
+        ],
+        "badges": ["1", "2"],
+        "skills": [
+            { "skillId": "3", "value": 85 },
+            { "skillId": "2", "value": 70 },
+            { "skillId": "6", "value": 10 }
+        ]
+    },
+    {
+        "_id": 4,
+        "name": "Али-Хан Байбутов",
+        "age": 27,
+        "image": "app/assets/imgs/avatars/ali-khan bajbutov.jpg",
+        "teaser": "Студент result school, в прошлом — инженер-конструктор. Люблю занятия спортом, в частности, офп, футбол. Играю на фортепиано и гитаре.",
+        "about": "В проекте Hackathon #2 реализовал компоненты Button и Breadcrumbs",
+        "isFavourite": false,
+        "social": [
+            {
+                "gh": "https://github.com/AliBaibutov"
+            }
+        ],
+        "badges": ["2"],
+        "skills": [
+            { "skillId": "5", "value": 60 },
+            { "skillId": "4", "value": 70 },
+            { "skillId": "2", "value": 58 },
+            { "skillId": "1", "value": 50 }
+        ]
+    }
+]
