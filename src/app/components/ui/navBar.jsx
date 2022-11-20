@@ -6,11 +6,9 @@ const NavBar = () => {
     const toggleMenu = () => {
         setOpen((prevState) => !prevState);
     };
-    const activLink = (active) => (active
-? "nav-link active"
-: "nav-link");
+    const activLink = (active) => (active ? "nav-link active" : "nav-link");
     return (
-        <header>
+        <header className="sticky-top opacity-75">
             <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
                 <div className="container-fluid">
                     <button
@@ -26,9 +24,7 @@ const NavBar = () => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div
-                        className={+isOpen
-? "d-flex mx-auto"
-: "collapse navbar-collapse"}
+                        className={+isOpen ? "d-flex mx-auto" : "collapse navbar-collapse"}
                         id="navbarText"
                     >
                         <ul className="navbar-nav  mb-1 mb-lg-0 mx-lg-auto">
