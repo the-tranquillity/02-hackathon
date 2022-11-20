@@ -1,82 +1,47 @@
-// eslint-disable
 import PropTypes from "prop-types";
-// import { twMerge } from "tailwind-merge";
 
 const ProgressBar = ({ progressData }) => {
-    const { name, progress: prog, color = "info", type = "circle", size = 10 } = progressData;
+    const { name, progress, color, type = "circle", width = 150 } = progressData;
     switch (type) {
         case "bar": {
             return (
-                <progress
-                    className={"progress progress-" + color + " w-56"}
-                    value={+prog}
-                    max="100"
-                ></progress>
-            );
-        }
-        case "circle": {
-            // const strokeWidth = width / 10;
-            // const radius = width / 2 - strokeWidth;
-            // const circleLength = 2 * 3.14 * radius;
-            // const circleProgressLength = (circleLength * prog) / 100;
-            // const st = `--value:70%;`;
-            // style={{marginRight: spacing + 'em'}}
-            const style = {
-                "--value": prog,
-                "--size": size + "rem",
-                "--thickness": 2 + "px",
-                color
-            };
-            const respColor = { color };
-            return (
-                <div className={"radial-progress prg"} style={style}>
-                    <span className="text-white">
-                        {name}
-                        <span className="prg-responsive" style={respColor}>
-                            {prog + "%"}
-                        </span>
-                    </span>
+                <div className={`mb-5`} style={{ color: `${color}` }}>
+                    <h5>{name}</h5>
+                    <div className={`rounded-xl bg-gray-600`}>
+                        <div
+                            style={{
+                                width: `${progress}%`,
+                                backgroundColor: `${color}`
+                            }}
+                            className={`text-center text-white rounded-xl`}
+                        >{`${progress}%`}</div>
+                    </div>
                 </div>
             );
         }
-        default:
-            return null;
-    }
-};
-
-ProgressBar.propTypes = {
-    progressData: PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        progress: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-        color: PropTypes.string.isRequired,
-        type: PropTypes.oneOf(["circle", "bar"]),
-        width: PropTypes.number,
-        size: PropTypes.number
-    })
-};
-
-export default ProgressBar;
-
-/*
-<div className="d-inline-block me-4">
-                    <h5 className={`text-center text-${color}`}>{name}</h5>
-                    <div className="position-relative">
+        case "circle": {
+            const strokeWidth = width / 10;
+            const radius = width / 2 - strokeWidth;
+            const circleProgressLength = (2 * 3.14 * radius * progress) / 100;
+            return (
+                <div className="inline-block mr-4">
+                    <h5 className={`text-center`} style={{ color: `${color}` }}>
+                        {name}
+                    </h5>
+                    <div className="relative">
                         <span
-                            className={`position-absolute top-50 start-50 fs-2 text-${color}`}
-                            style={{ transform: "translate(-50%, -50%)" }}
-                        >{`${prog}%`}</span>
+                            className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`}
+                            style={{ color: `${color}` }}
+                        >{`${progress}%`}</span>
                         <svg
-                            className={`text-${color}`}
+                            style={{ color: `${color}` }}
                             width={width}
                             height={width}
                             version="1.1"
                             xmlns="http://www.w3.org/2000/svg"
                         >
                             <circle
-                                style={{
-                                    transform: "rotate(-90deg)",
-                                    transformOrigin: "center"
-                                }}
+                                className="-rotate-90 origin-center"
                                 r={radius}
                                 cx={width / 2}
                                 cy={width / 2}
@@ -98,4 +63,22 @@ export default ProgressBar;
                         </svg>
                     </div>
                 </div>
-*/
+            );
+        }
+        default:
+            return null;
+    }
+};
+
+ProgressBar.propTypes = {
+    progressData: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        progress: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+        color: PropTypes.string.isRequired,
+        type: PropTypes.oneOf(["circle", "bar"]),
+        width: PropTypes.number,
+        size: PropTypes.number
+    })
+};
+
+export default ProgressBar;
