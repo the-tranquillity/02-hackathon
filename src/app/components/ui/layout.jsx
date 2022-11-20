@@ -1,17 +1,18 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Breadcrumbs from "../common/breadcrumbs";
 import NavBar from "./navBar";
 
 const Layout = () => {
+    const location = useLocation();
     return (
         <>
             <NavBar />
-            <div className="container mt-4">
-                <div className="mb-4">
+            {location.pathname !== "/" && (
+                <div className="my-4 container mx-auto">
                     <Breadcrumbs />
                 </div>
-                <Outlet />
-            </div>
+            )}
+            <Outlet />
         </>
     );
 };

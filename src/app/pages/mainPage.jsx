@@ -1,8 +1,9 @@
 import { useEffect } from "react";
-import TeamMateCard from "../components/ui/teamMateCard";
+// import TeamMateCard from "../components/ui/teamMateCard";
 import { useDispatch, useSelector } from "react-redux";
 import { getMates, getMatesLoadingStatus, loadMates } from "../store/mates";
 import Loader from "app/components/ui/loader";
+import HomeMateCard from "app/components/ui/homeMateCard";
 
 const Main = () => {
     const dispatch = useDispatch();
@@ -11,31 +12,69 @@ const Main = () => {
     useEffect(() => {
         dispatch(loadMates());
     }, [isLoading]);
-    return mates
-? (
-        <div>
-            <h1>О нашей команде</h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequatur
-                culpa cum cumque debitis earum eos eum ex exercitationem fugiat, fugit iure magni
-                minima molestiae, neque nobis non praesentium quae quibusdam quod rem sit sunt
-                suscipit temporibus velit veniam, vitae voluptatum. Aliquam at blanditiis debitis
-                deleniti distinctio, ea exercitationem ipsam, iure magni nemo nihil, qui repudiandae
-                similique sint soluta. Adipisci alias animi aspernatur dolor, doloremque ipsum
-                laboriosam maiores optio quibusdam, reiciendis sapiente vero voluptas. Adipisci
-                magni minima repellat reprehenderit vero! Eligendi, modi, nesciunt? A aliquam
-                corporis cum delectus dignissimos, harum inventore labore nesciunt non repellendus
-                sit soluta totam veniam voluptates.
-            </p>
-            <h2 className="my-2">Участники</h2>
-            <div className="row row-cols-1 row-cols-md-2 g-4 mt-2">
-                {mates.map((m) => (
-                    <TeamMateCard key={m._id} mate={m} />
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const body = document.documentElement;
+            const scroll = window.pageYOffset;
+            const height = body.clientHeight;
+            if (scroll < height * 0.9) {
+                // dark
+                body.style.backgroundColor = "#0D0D0D";
+            } else if (scroll >= height * 0.9 && scroll < height * 1.8) {
+                // purple
+                body.style.backgroundColor = "#4E4E96";
+            } else if (scroll >= height * 1.8 && scroll < height * 2.3) {
+                // orange
+                body.style.backgroundColor = "#378aba";
+            } else {
+                body.style.backgroundColor = "#ec4e2d";
+            }
+        };
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [window.pageYOffset]);
+    useEffect(() => {
+        const body = document.documentElement;
+        body.style.backgroundColor = "#0D0D0D";
+    }, []);
+
+    return mates ? (
+        <div className="prose lg:prose-xl">
+            <div className="hero h-screen home-section-one mt-[-76px]">
+                <div className="hero-content w-full">
+                    <div className="container mt-[20vh]">
+                        <h1 className="text-7xl md:text-8xl  lg:text-9xl font-bold text-white">
+                            Team #4
+                            <br />
+                            Frontend
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div className="hero h-[50vh] w-full">
+                <div className="hero-content w-full">
+                    <div className="container text-3xl">
+                        <p>
+                            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+                            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a
+                            id nisi.
+                        </p>
+                        <p className="mt-6">
+                            Curabitur laoreet ante turpis, porttitor mattis dui finibus non.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div className="min-h-screen pt-[5vh]">
+                {mates.map((m, i) => (
+                    <HomeMateCard key={m._id} mate={m} side={i % 2 === 0} />
                 ))}
             </div>
         </div>
-    )
-: (
+    ) : (
         <Loader />
     );
 };

@@ -1,3 +1,4 @@
+/* eslint-disable  */
 import { SMEDIA } from "../constants/constants";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -51,6 +52,11 @@ const User = () => {
         }
     }, [mate]);
 
+    useEffect(() => {
+        const body = document.documentElement;
+        body.style.backgroundColor = "";
+    }, []);
+
     const getBadgeById = (bageId) => badgesData.find((b) => +b._id === +bageId);
     const getSkillById = (skId) => skillsData.find((s) => +s._id === +skId);
 
@@ -59,130 +65,42 @@ const User = () => {
     };
 
     return mate ? (
-        <div className="container">
-            <div className="row">
-                <div className="col-lg-8">
-                    {/* <!-- Card--> */}
-                    <div className="card mb-4">
-                        <div className="row g-0">
-                            <div className="col-md-4">
-                                <img
-                                    src={mate.image ? require(`/src/${mate.image}`) : fallbackImg}
-                                    className="img-fluid rounded-start h-100"
-                                    alt="..."
-                                />
-                            </div>
-                            <div className="col-md-8 d-flex flex-column">
-                                <div className="card-body">
-                                    <h5 className="card-title mb-0">{mate.name}</h5>
-                                    <p className="card-text">
-                                        <small className="text-muted">{mate.age} лет</small>
-                                    </p>
-                                    <p className="card-text">{mate.teaser}</p>
-                                </div>
-                                <div className="card-footer text-end mb-1 me-2 bg-white border-0 ">
-                                    <Button
-                                        bgColor="transparent"
-                                        textColor="primary"
-                                        action={handleFav}
-                                        handler={true}
-                                    >
-                                        <i
-                                            className={
-                                                "bi fs-5 bi-star" +
-                                                (mate.isFavourite ? "-fill" : "")
-                                            }
-                                        ></i>
-                                    </Button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="row">
-                        <div className="col">
-                            {/* <!-- Moreinfo--> */}
-                            <div className="card mb-4">
-                                <div className="card-body">
-                                    <h2 className="card-title h4">Роль в проекте</h2>
-                                    <p className="card-text">{mate.about}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col">
-                            {/* <!-- Role--> */}
-                            <div className="card mb-4">
-                                <div className="card-body">
-                                    <h2 className="card-title h4 mb-4">Навыки</h2>
-                                    <div className="card-text">
-                                        {mateSkills ? (
-                                            mateSkills.map((s) => (
-                                                <ProgressBar key={s._id} progressData={s} />
-                                            ))
-                                        ) : (
-                                            <Loader />
-                                        )}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col">
-                            <Button bgColor="primary" to="/" routerLink={true}>
-                                <i className="bi bi-chevron-left me-2"></i> К списку участников
-                                команды
+        <div className="flex flex-col container mx-auto mt-8">
+            <div className="flex-1 flex flex-col lg:flex-row gap-x-8 xl:gap-x-11">
+                <div className="card lg:card-side bg-base-100 shadow-xl flex-1">
+                    <figure className=" lg:rounded-b-lg lg:rounded-l-lg">
+                        <img
+                            src={mate.image ? require(`/src/${mate.image}`) : fallbackImg}
+                            alt="Album"
+                            className="rounded lg:rounded-none"
+                        />
+                    </figure>
+                    <div className="card-body bg-[#2D3035] rounded-lg mt-6 lg:mt-0 ">
+                        <h2 className="mt-1 card-title text-white text-3xl mb-3">{mate.name}</h2>
+                        <p>{mate.teaser}</p>
+                        <div className="card-actions justify-end">
+                            <Button
+                                bgColor="transparent"
+                                action={handleFav}
+                                handler={true}
+                                tsptHover={true}
+                            >
+                                <i
+                                    className={
+                                        "text-accent text-xl bi bi-star" +
+                                        (mate.isFavourite ? "-fill" : "")
+                                    }
+                                ></i>
                             </Button>
                         </div>
                     </div>
                 </div>
-                {/* <!-- Side widgets--> */}
-                <div className="col-lg-4">
-                    {/* <!-- Tags widget--> */}
-                    <div className="card mb-4">
-                        <div className="card-header">Tags</div>
-                        <div className="card-body container">
-                            <div className="d-flex flex-wrap">
-                                {mateBages ? (
-                                    mateBages.map((bdg) => (
-                                        <Badge
-                                            key={"badge_key" + bdg._id}
-                                            bgColor={bdg.color}
-                                            label={bdg.name}
-                                        />
-                                    ))
-                                ) : (
-                                    <Loader />
-                                )}
-                            </div>
-                        </div>
+                <aside className="lg:w-60 xl:w-80 card shadow-xl ">
+                    <div className="card-body bg-[#2D3035] rounded-lg mt-6 lg:mt-0">
+                        <h2 className="card-title text-white">Tags</h2>
+                        <p>If a dog chews shoes whose shoes does he choose?</p>
                     </div>
-                    {/* <!-- social widget--> */}
-                    <div className="card mb-4">
-                        <div className="card-header">Соцсети</div>
-                        <div className="card-body">
-                            {mateSocial ? (
-                                mateSocial.map((sm) => (
-                                    <a
-                                        target="_blank"
-                                        key={"media-key_" + sm.key}
-                                        href={sm.link}
-                                        rel="noreferrer"
-                                    >
-                                        <i
-                                            className={sm.color + " me-3 fs-3 bi bi-" + sm.icon}
-                                            title={sm.icon}
-                                        ></i>
-                                    </a>
-                                ))
-                            ) : (
-                                <Loader />
-                            )}
-                        </div>
-                    </div>
-                </div>
+                </aside>
             </div>
         </div>
     ) : (

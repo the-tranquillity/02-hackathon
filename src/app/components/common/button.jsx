@@ -11,11 +11,14 @@ const Button = ({
     to,
     action,
     noBorder,
+    tsptHover,
     handler
 }) => {
     const classes =
         (rounded ? "rounded-pill" : "") +
-        " btn " +
+        "btn " +
+        (tsptHover ? "hover:bg-transparent border-transparent hover:border-transparent" : "") +
+        " " +
         (bgColor ? "bg-" + bgColor : "") +
         " " +
         (textColor ? "text-" + textColor : "") +
@@ -50,6 +53,7 @@ Button.propTypes = {
     to: PropTypes.string,
     action: PropTypes.func,
     noBorder: PropTypes.bool,
+    tsptHover: PropTypes.bool,
     handler: PropTypes.bool
 };
 
