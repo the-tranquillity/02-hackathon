@@ -114,8 +114,8 @@ const User = () => {
                     </div>
                     <div className="card bg-[#2D3035] shadow-xl">
                         <div className="card-body  rounded-lg">
-                            <h2 className="card-title text-white mb-8">Навыки</h2>
-                            <div className="flex gap-12">
+                            <h2 className="card-title text-white mb-4">Навыки</h2>
+                            <div>
                                 {mateSkills ? (
                                     mateSkills.map((s) => (
                                         <ProgressBar key={s._id} progressData={s} />
