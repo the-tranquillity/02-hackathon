@@ -7,6 +7,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "./index.css";
 import { createStore } from "app/store/createStore";
 import { Provider } from "react-redux";
+import "swiper/css/bundle";
 
 const store = createStore();
 const root = ReactDOM.createRoot(document.getElementById("root"));

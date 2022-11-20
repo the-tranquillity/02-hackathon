@@ -8,7 +8,7 @@ import declOfNum from "app/utils/age";
 const TeamMateCard = ({ mate }) => {
     const dispatch = useDispatch();
     const { _id: id, name, age, image, isFavourite, teaser } = mate;
-    const imgFallback = "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=500";
+    const imgFallback = "https://via.placeholder.com/500";
 
     const handleFav = () => {
         dispatch(updateMate({ ...mate, isFavourite: !isFavourite }));

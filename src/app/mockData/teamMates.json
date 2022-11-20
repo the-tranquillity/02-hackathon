@@ -70,7 +70,7 @@
         "_id": 4,
         "name": "Али-Хан Байбутов",
         "age": 27,
-        "image": null,
+        "image": "app/assets/imgs/avatars/ali-khan bajbutov.jpg",
         "teaser": "Студент result school, в прошлом — инженер-конструктор. Люблю занятия спортом, в частности, офп, футбол. Играю на фортепиано и гитаре.",
         "about": "В проекте Hackathon #2 реализовал компоненты Button и Breadcrumbs",
         "isFavourite": false,
