@@ -71,12 +71,14 @@ export const routes = [
             {
                 path: "favourites",
                 breadcrumb: "Избранное",
-                element: <Favourites />
+                element: <Favourites />,
+                menu: true
             },
             {
                 path: "mates",
                 breadcrumb: "Участники",
-                element: <Mates />
+                element: <Mates />,
+                menu: true
             },
             {
                 path: "*",

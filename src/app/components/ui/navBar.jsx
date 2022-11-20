@@ -1,6 +1,6 @@
 import useHeightReacher from "app/hooks/useHeightReacher";
 import { NavLink } from "react-router-dom";
-
+import { routes } from "../../routes/routes";
 const NavBar = () => {
     const { isReached } = useHeightReacher(10);
     const activLink = (active) => (active ? "text-white bg-transparent" : "text-slate-300");
@@ -39,19 +39,18 @@ const NavBar = () => {
                 </div>
                 <div className="navbar-end hidden lg:flex">
                     <ul className="menu menu-horizontal p-0 font-medium">
-                        <li>
-                            <NavLink className={({ isActive }) => activLink(isActive)} to="/mates">
-                                Участники
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink
-                                className={({ isActive }) => activLink(isActive)}
-                                to="/favourites"
-                            >
-                                Избранные
-                            </NavLink>
-                        </li>
+                        {routes[0].children
+                            .filter((el) => Object.hasOwn(el, "menu"))
+                            .map((mnuItem) => (
+                                <li key={"mnu-item-" + mnuItem.path}>
+                                    <NavLink
+                                        className={({ isActive }) => activLink(isActive)}
+                                        to={"/" + mnuItem.path}
+                                    >
+                                        {mnuItem.breadcrumb}
+                                    </NavLink>
+                                </li>
+                            ))}
                     </ul>
                 </div>
                 <div className="dropdown">
@@ -75,14 +74,20 @@ const NavBar = () => {
                         tabIndex={0}
                         className="menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-52 right-0 bg-[#0D0D0D] "
                     >
-                        <li>
-                            <NavLink
-                                className={({ isActive }) => activLink(isActive) + " ml-auto"}
-                                to="/favourites"
-                            >
-                                Избранные
-                            </NavLink>
-                        </li>
+                        {routes[0].children
+                            .filter((el) => Object.hasOwn(el, "menu"))
+                            .map((mnuItem) => (
+                                <li key={"mnu-responsive-" + mnuItem.path}>
+                                    <NavLink
+                                        className={({ isActive }) =>
+                                            activLink(isActive) + " ml-auto"
+                                        }
+                                        to={"/" + mnuItem.path}
+                                    >
+                                        {mnuItem.breadcrumb}
+                                    </NavLink>
+                                </li>
+                            ))}
                     </ul>
                 </div>
             </div>
