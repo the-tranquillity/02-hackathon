@@ -1,7 +1,15 @@
 import PropTypes from "prop-types";
+import { useEffect, useState } from "react";
 
 const ProgressBar = ({ progressData }) => {
     const { name, progress, color, type = "circle", width = 150 } = progressData;
+    const [aniProg, setAniProg] = useState(0);
+    useEffect(() => {
+        if (aniProg < +progress) {
+            setTimeout(() => setAniProg((prevState) => prevState + 1), 17);
+        }
+    }, [aniProg]);
+
     switch (type) {
         case "bar": {
             return (
@@ -10,11 +18,11 @@ const ProgressBar = ({ progressData }) => {
                     <div className={`rounded-xl bg-gray-600`}>
                         <div
                             style={{
-                                width: `${progress}%`,
+                                width: `${aniProg}%`,
                                 backgroundColor: `${color}`
                             }}
                             className={`text-center text-white rounded-xl`}
-                        >{`${progress}%`}</div>
+                        >{`${aniProg}%`}</div>
                     </div>
                 </div>
             );
@@ -22,7 +30,7 @@ const ProgressBar = ({ progressData }) => {
         case "circle": {
             const strokeWidth = width / 15;
             const radius = width / 2 - strokeWidth;
-            const circleProgressLength = (2 * 3.14 * radius * progress) / 100;
+            const circleProgressLength = (2 * 3.14 * radius * aniProg) / 100;
             return (
                 <div className="flex flex-col items-center">
                     <h5 className={`text-center mb-4 font-medium`} style={{ color: `${color}` }}>
@@ -32,7 +40,7 @@ const ProgressBar = ({ progressData }) => {
                         <span
                             className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xl`}
                             style={{ color: `${color}` }}
-                        >{`${progress}%`}</span>
+                        >{`${aniProg}%`}</span>
                         <svg
                             style={{ color: `${color}` }}
                             width={width}
