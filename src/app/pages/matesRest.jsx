@@ -1,4 +1,3 @@
-// eslint-disable
 import { useCallback, useEffect, useState } from "react";
 import Button from "app/components/common/button";
 import { useDispatch, useSelector } from "react-redux";

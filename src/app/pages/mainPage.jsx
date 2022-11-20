@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-// import TeamMateCard from "../components/ui/teamMateCard";
 import { useDispatch, useSelector } from "react-redux";
 import { getMates, getMatesLoadingStatus, loadMates } from "../store/mates";
 import Loader from "app/components/ui/loader";
@@ -19,13 +18,10 @@ const Main = () => {
             const scroll = window.pageYOffset;
             const height = body.clientHeight;
             if (scroll < height * 0.9) {
-                // dark
                 body.style.backgroundColor = "#0D0D0D";
             } else if (scroll >= height * 0.9 && scroll < height * 1.8) {
-                // purple
                 body.style.backgroundColor = "#4E4E96";
             } else if (scroll >= height * 1.8 && scroll < height * 2.3) {
-                // orange
                 body.style.backgroundColor = "#378aba";
             } else {
                 body.style.backgroundColor = "#ec4e2d";

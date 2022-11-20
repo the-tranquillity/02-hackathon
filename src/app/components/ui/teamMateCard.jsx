@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
 import { updateMate } from "app/store/mates";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -63,6 +63,9 @@ const TeamMateCard = ({ mate }) => {
             </div>
         )
     );
+};
+TeamMateCard.propTypes = {
+    mate: PropTypes.object
 };
 
 export default TeamMateCard;

@@ -1,4 +1,4 @@
-/* eslint-disable  */
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import Button from "../common/button";
 import declOfNum from "app/utils/age";
@@ -53,4 +53,10 @@ const HomeMateCard = ({ mate, side }) => {
         )
     );
 };
+
+HomeMateCard.propTypes = {
+    mate: PropTypes.object,
+    side: PropTypes.bool
+};
+
 export default HomeMateCard;

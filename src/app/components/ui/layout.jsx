@@ -32,7 +32,3 @@ const Layout = () => {
 };
 
 export default Layout;
-/*
-shrink-0
-
-*/

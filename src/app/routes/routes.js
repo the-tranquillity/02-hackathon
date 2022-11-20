@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
 import { Navigate, useParams } from "react-router-dom";
 import Layout from "../components/ui/layout";
 import NotFound from "../pages/notFound";
@@ -91,3 +91,6 @@ export const routes = [
         element: <Navigate to="/" />
     }
 ];
+DynamicUserBreadcrumb.propTypes = {
+    match: PropTypes.object
+};
