@@ -1,15 +1,7 @@
 import PropTypes from "prop-types";
 
 const Badge = ({ bgColor, textColor, label }) => {
-    return (
-        <div
-            className={
-                "w-auto px-3 py-1 me-2 text-white rounded bg-" + bgColor + " " + "text-" + textColor
-            }
-        >
-            {label}
-        </div>
-    );
+    return <span className={"font-medium badge badge-lg badge-" + bgColor}>{label}</span>;
 };
 
 Badge.defaultProps = {

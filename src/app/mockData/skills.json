@@ -2,17 +2,17 @@
     {
         "_id": "1",
         "name": "React",
-        "color": "primary"
+        "color": "#2563eb"
     },
     {
         "_id": "2",
         "name": "CSS",
-        "color": "success"
+        "color": "#84cc16"
     },
     {
         "_id": "3",
         "name": "Design & UI",
-        "color": "dark"
+        "color": "#9333ea"
     },
     {
         "_id": "4",
@@ -22,11 +22,11 @@
     {
         "_id": "5",
         "name": "HTML",
-        "color": "dark"
+        "color": "#84cc16"
     },
     {
         "_id": "6",
         "name": "TypeScript",
-        "color": "info"
+        "color": "#06b6d4"
     }
 ]

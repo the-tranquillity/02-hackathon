@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
 function useHeightReacher(offsetBlurHeight) {
-    const [isReached, setIsReached] = useState(
-        isHeightReached(offsetBlurHeight)
-    );
+    const [isReached, setIsReached] = useState(isHeightReached(offsetBlurHeight));
     function isHeightReached(height) {
-        var doc = document.documentElement;
-        var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+        const doc = document.documentElement;
+        const top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
         return top > height;
     }
 

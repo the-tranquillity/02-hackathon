@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .full-width {
     width: 100vw;
     position: relative;
@@ -12,6 +16,7 @@ body {
 .cst-text-end {
     text-align: center;
 }
+
 @screen lg {
     .cst-text-start {
         text-align: start;
@@ -454,6 +459,3 @@ img {
         width: 100%;
     }
 }
-@tailwind base;
-@tailwind components;
-@tailwind utilities;

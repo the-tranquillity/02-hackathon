@@ -7,10 +7,10 @@ module.exports = {
     },
     plugins: [require("daisyui")],
     daisyui: {
-        styled: true,
         themes: ["corporate", "business"],
         utils: true,
         logs: true,
+        styled: true,
         rtl: false,
         prefix: "",
         darkTheme: "business"
@@ -21,4 +21,5 @@ module.exports = {
         plugin(function ({ addVariant }) {
             addVariant("hactive", "&:active");
         })
+
 */

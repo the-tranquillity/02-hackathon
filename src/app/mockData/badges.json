@@ -7,21 +7,21 @@
     {
         "_id": "2",
         "name": "Frontend",
-        "color": "primary"
+        "color": "danger"
     },
     {
         "_id": "3",
         "name": "Backend",
-        "color": "dark"
+        "color": "success"
     },
     {
         "_id": "4",
         "name": "Creativity",
-        "color": "danger"
+        "color": "success"
     },
     {
         "_id": "5",
         "name": "Content",
-        "color": "info"
+        "color": "success"
     }
 ]
