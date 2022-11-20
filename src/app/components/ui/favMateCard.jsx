@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import Button from "../common/button";
 import declOfNum from "app/utils/age";
 import ReactAutosyncHeight from "react-autosync-height";
+import { toast } from "react-toastify";
 
 const FavMateCard = ({ mate }) => {
     const dispatch = useDispatch();
@@ -12,7 +13,9 @@ const FavMateCard = ({ mate }) => {
     const imgFallback = "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=500";
 
     const handleFav = () => {
+        const curStatus = !isFavourite;
         dispatch(updateMate({ ...mate, isFavourite: !isFavourite }));
+        curStatus ? toast.success(`${mate.name} добавлен`) : toast.info(`${mate.name} удалён`);
     };
     return (
         mate && (

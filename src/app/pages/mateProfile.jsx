@@ -11,6 +11,7 @@ import ProgressBar from "../components/common/progress";
 import Button from "app/components/common/button";
 import Badge from "app/components/common/badge";
 import declOfNum from "app/utils/age";
+import { toast } from "react-toastify";
 const parse = require("html-react-parser");
 
 const User = () => {
@@ -64,7 +65,9 @@ const User = () => {
     const getSkillById = (skId) => skillsData.find((s) => +s._id === +skId);
 
     const handleFav = () => {
+        const curStatus = !mate.isFavourite;
         dispatch(updateMate({ ...mate, isFavourite: !mate.isFavourite }));
+        curStatus ? toast.success(`${mate.name} добавлен`) : toast.info(`${mate.name} удалён`);
     };
 
     return mate ? (

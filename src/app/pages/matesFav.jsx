@@ -22,7 +22,6 @@ const Favourites = () => {
         const body = document.documentElement;
         body.style.backgroundColor = "";
     }, []);
-
     return (
         <div className="flex flex-col container mx-auto mt-8 pb-14 px-3 lg:px-0">
             <h1 className="mt-1 text-white font-bold text-3xl mb-16">Избранное</h1>
@@ -34,10 +33,11 @@ const Favourites = () => {
                         <div className="col">
                             <p>В избранном пока никого нет.</p>
                             <Button
-                                bgColor="primary"
-                                to="/"
+                                bgColor="info"
+                                to="/mates"
                                 routerLink={true}
                                 label="Посмотреть участников команды"
+                                moreClasses="mt-4"
                             />
                         </div>
                     )
