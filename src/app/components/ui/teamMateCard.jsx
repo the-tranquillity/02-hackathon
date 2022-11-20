@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import Button from "../common/button";
 import declOfNum from "app/utils/age";
+import { toast } from "react-toastify";
 
 const TeamMateCard = ({ mate }) => {
     const dispatch = useDispatch();
@@ -11,7 +12,9 @@ const TeamMateCard = ({ mate }) => {
     const imgFallback = "https://via.placeholder.com/500";
 
     const handleFav = () => {
+        const curStatus = !isFavourite;
         dispatch(updateMate({ ...mate, isFavourite: !isFavourite }));
+        curStatus ? toast.success(`${mate.name} добавлен`) : toast.info(`${mate.name} удалён`);
     };
     return (
         mate && (
