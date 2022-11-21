@@ -24,8 +24,11 @@ export const routes = [
         element: <Layout />,
         children: [
             {
+                path: "02-hackathon",
+                element: <Navigate to="/" />
+            },
+            {
                 index: true,
-                breadcrumb: "Главная",
                 element: <Main />
             },
             {
