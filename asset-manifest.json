@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6c422821.css",
+    "main.js": "/static/js/main.032f0484.js",
+    "static/js/787.a984f831.chunk.js": "/static/js/787.a984f831.chunk.js",
+    "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.6959d0d983ee318f8880.woff",
+    "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.b2e5aab643c6f0fd2da6.woff2",
+    "static/media/aleksej-chernov.jpg": "/static/media/aleksej-chernov.85c87f2fc55a6ffcf5b9.jpg",
+    "static/media/yurij-stakhnev.jpg": "/static/media/yurij-stakhnev.35979f5a742e44e26929.jpg",
+    "static/media/ali-khan bajbutov.jpg": "/static/media/ali-khan bajbutov.d25303d6163b239c0bd0.jpg",
+    "static/media/mikhail-katyanov.jpg": "/static/media/mikhail-katyanov.a888b956709adec186ef.jpg",
+    "static/media/home-s1-bg.webp": "/static/media/home-s1-bg.35f111eb09e71c456e61.webp",
+    "index.html": "/index.html",
+    "main.6c422821.css.map": "/static/css/main.6c422821.css.map",
+    "main.032f0484.js.map": "/static/js/main.032f0484.js.map",
+    "787.a984f831.chunk.js.map": "/static/js/787.a984f831.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6c422821.css",
+    "static/js/main.032f0484.js"
+  ]
+}
