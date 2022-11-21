@@ -21,6 +21,7 @@ const UsersRedirect = () => {
 export const routes = [
     {
         path: "/",
+        breadcrumb: "Главная",
         element: <Layout />,
         children: [
             {
